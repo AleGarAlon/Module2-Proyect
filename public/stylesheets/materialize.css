@@ -2809,7 +2809,7 @@ ul.staggered-list li {
 .page-footer .footer-copyright,
 .page-footer .footer-copyright a {
   overflow: hidden;
-  min-height: 50px;
+  max-height: 35px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2822,7 +2822,7 @@ ul.staggered-list li {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5px 30px;
+  padding: 0 30px;
   color: var(--font-on-primary-color-dark-medium);
   background-color: var(--primary-color-dark);
   text-decoration: none;

@@ -9,26 +9,23 @@
     <link rel="stylesheet" href="/stylesheets/materialize.css" type="text/css" media="screen,projection"/>
     <link rel="stylesheet" href="/stylesheets/materialize.css" type="text/css" media="screen,projection"/>
   </head>
-
+  
   <body>
 
-    <!-- <%- body %> -->
-
-<!-- replace with .ejs version  -->
+<!-- navbar section copied to file for ejs-->
     <nav id="nav-bar" class="nav-bar">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li id="Home"><a href="Home">Home</a></li>
-            <li id="sign-in"><a href="sign-in">Sign in</a></li>
-            <li id="log-in"><a href="log-in">Log in</a></li>
+            <li id="Home"><a href="/">Home</a></li>
+            <li id="log-in"><a href="/auth/login">Login</a></li>
+            <li id="sign-in"><a href="/auth/signup">Sign up</a></li>
             <li id="about-us"><a href="about-us">About us</a></li>
-        </ul>
-      </div>
-    </nav>
-    
-
-  <div id="body-id" class="body-main container">  
+          </ul>
+        </div>
+      </nav>
+      
+      <div id="body-id" class="body-main container">  
     <section>
       <h1>Header 1</h1>
 
@@ -47,50 +44,33 @@
 
 
   </div>
-
-<!-- replace with .ejs version  -->
-    <footer class="page-footer">
-      
-        <div class="row">
-          <div class="col s4">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mattis massa non elit elementum, non condimentum erat egestas.</p>
-          </div>
-          <div class="col 6  s6">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Sign In</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Login</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
-            </ul>
-          </div>
-        </div>
-      
-      <div class="footer-copyright">
-        © 2023 Copyright
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-      </div>
-    </footer>
-  
-  
-
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/auth/signup">Sign up</a></li>
-        <li><a href="/auth/login">Login</a></li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/activities/activities">Activities</a></li>
-        <li><a href="/activities/create">New activity</a></li>
-        
-      </ul>
-    </nav>
-    <%- body %>
-
-
-    <script src="/js/script.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
+  
+<!-- footer section copied to file for ejs-->
+  <footer class="page-footer">
+      <div class="row">
+        <div class="footer-content l6 s12">
+          <h5 class="footer-h5">Footer Content</h5>
+          <p>You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="l0 s6 footer-links">
+          <h5 class="footer-h5">Links</h5>
+          <ul class="footer-ul">
+            <li class="footer-a"><a class="grey-text text-lighten-3" href="/">Home</a></li>
+            <li class="footer-a"><a class="grey-text text-lighten-3" href="/auth/signup">Sign up</a></li>
+            <li class="footer-a"><a class="grey-text text-lighten-3" href="/auth/login">Login</a></li>
+            <li class="footer-a"><a class="grey-text text-lighten-3" href="about-us">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2014 Copyright
+    </div>
+  </footer>
+  
+  <script src="/js/script.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  
 </html>
