@@ -1,0 +1,42 @@
+<h2>New activitie</h2>
+
+<form action="/activities/create" method="POST">
+    <label> Name:
+        <input type="text" name = "name">
+    </label>
+    <label> Description:
+        <input type="text" name = "description">
+    </label>
+    <label> Duration:
+        <select name="duration" id="duration">
+            <option value="5">5 Minutos</option>
+            <option value="15">15 Minutos</option>
+            <option value="30">30 Minutos</option>
+            <option value="60">60 Minutos</option>
+        </select>
+    </label>
+    <label> Age:
+        <select name="age" id="age" multiple>
+            <option value="0-1">0-1 Años</option>
+            <option value="1-2">1-2 Años</option>
+            <option value="3-4">3-4 Años</option>
+            <option value="5-6">5-6 Años</option>
+        </select>
+    </label>
+    <label> Materials:
+        <input type="text" name = "materials">
+    </label>
+    <label> Skills:
+        <input type="text" name = "skills">
+    </label>
+    <label> Steps:
+        <input type="text" name = "steps">
+    </label>
+    <label> Image:
+        <input type="url" name = "image">
+    </label>
+    
+    
+    
+    <button type="submit">Create</button>
+    </form>
