@@ -2799,9 +2799,12 @@ ul.staggered-list li {
   padding-top: 20px;
   color: var(--font-on-primary-color-main);
   background-color: var(--primary-color);
+  text-decoration: none;
 }
 .page-footer a {
   color: var(--font-on-primary-color-main);
+  font-weight: bold;
+  text-decoration: none;
 }
 .page-footer .footer-copyright,
 .page-footer .footer-copyright a {
@@ -2819,9 +2822,10 @@ ul.staggered-list li {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 0px;
+  padding: 5px 30px;
   color: var(--font-on-primary-color-dark-medium);
   background-color: var(--primary-color-dark);
+  text-decoration: none;
 }
 
 table, th, td {
