@@ -38,27 +38,10 @@ app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`
 
 // 👇 Start handling routes here
 const indexRoutes = require('./routes/index.routes')
-app.get('/', (req, res) => {
-    // Render the home page using the layout.ejs file
-    res.render('pages/index');
-  });
-  
-  app.get('/signup', (req, res) => {
-    // Render the signup page using the signup.ejs file
-    res.render('auth/signup');
-  });
-  
-  app.get('/login', (req, res) => {
-    // Render the login page using the login.ejs file
-    res.render('auth/login');
-  });
-  
-  app.get('/about-us', (req, res) => {
-    // Render the login page using the login.ejs file
-    res.render('partials/about-us');
-  });
 
-
+const index = require('./routes/index.routes')
+app.use('/', index)
+  
 const activitiesRoutes = require('./routes/activities.routes')
 app.use('/activities',isLoggedIn, activitiesRoutes)
 
