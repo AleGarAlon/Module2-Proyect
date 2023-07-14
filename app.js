@@ -10,6 +10,8 @@ require('./db')
 const express = require('express')
 
 const app = express()
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require('./config')(app)
@@ -24,7 +26,20 @@ app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`
 
 // 👇 Start handling routes here
 const indexRoutes = require('./routes/index.routes')
-app.use('/', indexRoutes)
+//app.use('/', indexRoutes)
+
+app.get("/", (req, res, next) => {
+    res.render('layout')
+});
+
+app.get("/signup", (req, res, next) => {
+    res.render('auth/signup')
+});
+
+app.get("/login", (req, res, next) => {
+    res.render('auth/login')
+});
+
 
 const activitiesRoutes = require('./routes/activities.routes')
 app.use('/activities',isLoggedIn, activitiesRoutes)
@@ -39,3 +54,4 @@ app.use('/auth', isLoggedOut, authRoutes)
 require('./error-handling')(app)
 
 module.exports = app
+
