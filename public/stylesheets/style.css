@@ -7,6 +7,7 @@ body
   font-family: Roboto;
   
 } 
+
 .body-main {
   margin-top: 100px ;
   padding: 0 20px;
@@ -53,7 +54,7 @@ nav {
   overflow: visible !important;
 }
 .nav-bar {
-    background-color: #9AA6AC;
+   
     width: 100%;
     position: fixed;
     top: 0;
@@ -68,7 +69,10 @@ ul {
   font-size: small;
 }
 
-.footer-content, .footer-links {
+.footer-content  {
+  padding-left: 35px;
+}
+.footer-links {
   padding-right: 35px;
 }
 .footer-ul {
@@ -88,13 +92,57 @@ ul {
   padding: 0 20px;
 }
 
-
-.form-new {
-  display: flex;
-  flex-direction: column;
+form {
   width: 60vw;
   max-width: 500px;
   min-width: 300px;
   margin: 0 auto;
   padding-bottom: 2em;
+}
+
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+/*
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+*/
+input, textarea {
+  background-color: #F3F6FC;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.image-field {
+  margin-top: 5px;
+}
+
+.field-bottom {
+  margin-top: 30px;
+}
+
+.drop-down-bottom {
+  border-bottom: 1px solid #0a0a23;
+  padding-bottom: 10px;
+}
+.label-bottom {
+  padding-left: 15px;
+  font-size: medium;
+}
+
+.choose-div {
+  margin-top: 20px;
+}
+.button-center {
+  display:flex;
+  margin-top: 30px;
+  justify-content: center;
 }
