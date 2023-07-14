@@ -10,6 +10,20 @@ require('./db')
 const express = require('express')
 
 const app = express()
+const path      = require("path");
+const expressLayouts = require("express-ejs-layouts"); 
+ 
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(expressLayouts);
+
+// Disable caching for the routes that render your pages
+app.use((req, res, next) => {
+    res.header('Cache-Control', 'no-store');
+    next();
+  });
+  
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require('./config')(app)
@@ -24,7 +38,22 @@ app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`
 
 // 👇 Start handling routes here
 const indexRoutes = require('./routes/index.routes')
-app.use('/', indexRoutes)
+app.get('/', (req, res) => {
+    // Render the home page using the layout.ejs file
+    res.render('pages/index');
+  });
+  
+  app.get('/signup', (req, res) => {
+    // Render the signup page using the signup.ejs file
+    res.render('auth/signup');
+  });
+  
+  app.get('/login', (req, res) => {
+    // Render the login page using the login.ejs file
+    res.render('auth/login');
+  });
+  
+
 
 const activitiesRoutes = require('./routes/activities.routes')
 app.use('/activities',isLoggedIn, activitiesRoutes)
@@ -39,3 +68,4 @@ app.use('/auth', isLoggedOut, authRoutes)
 require('./error-handling')(app)
 
 module.exports = app
+

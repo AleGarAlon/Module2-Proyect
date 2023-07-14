@@ -62,8 +62,28 @@ nav {
     top: 0;
     z-index:3;
 }
-nav .nav-wrapper ul li a {
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: clip !important;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
+.footer-copyright {
+  font-size: small;
+}
+
+.footer-content, .footer-links {
+  padding-right: 35px;
+}
+.footer-ul {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-h5 {
+  padding: 0;
+}
+#general-information {
+  display: flex;
+  justify-content: space-evenly;
+  height: 280px;
+  
+  }
