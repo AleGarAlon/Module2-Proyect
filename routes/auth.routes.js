@@ -41,7 +41,7 @@ router.post('/login', async(req, res, next) => {
         userExist.password ="*****"
         req.session.user=userExist
         console.log(req.session.user)
-        res.redirect("/profile") 
+        res.redirect("profile") 
      }
         
      else{
