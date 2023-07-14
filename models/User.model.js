@@ -24,15 +24,10 @@ const userSchema = new Schema(
       type: String,
       default : "user",
     },
-    kids: [
-      {
-      type: Schema.Types.ObjectId,
-      ref:"Kid"
-      }
-      ]
-
-
-    
+    kids: {
+      type: Array
+    }
+       
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`    

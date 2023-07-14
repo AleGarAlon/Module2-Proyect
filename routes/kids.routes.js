@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Activity =require('../models/Activity.model');
 const Kid =require('../models/Kid.model');
+const User =require('../models/User.model');
 
 
 router.get('/newKid' ,(request ,  response) =>{
@@ -19,8 +20,13 @@ router.post('/newKid', async(req , res) => {
     try{
         const activities = await Activity.find({ age: { $in: kidInfo.age } });
         kidInfo.activities = activities.map(activity => activity._id);
+       
         console.log(kidInfo);
-        const newkid = await Kid.create(kidInfo)
+        const newKid = await Kid.create(kidInfo)
+        const parent = await User.findByIdAndUpdate(parentInfo._id, 
+            { $push: { kids: newKid } }, 
+            { new: true });
+        console.log(parent)    
         res.redirect("/profile")
    } 
    catch (error){
