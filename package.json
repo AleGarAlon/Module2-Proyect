@@ -9,6 +9,7 @@
   "dependencies": {
     "@materializecss/materialize": "^2.0.1-alpha",
     "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.37.3",
     "connect-mongo": "^5.0.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.3.1",
@@ -19,6 +20,8 @@
     "materialize-css": "^1.0.0-rc.2",
     "mongoose": "^7.3.3",
     "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {

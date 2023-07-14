@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const uploader = require("../config/cloudinary.config.js");
 
 const Activity =require('../models/Activity.model');
 
@@ -18,17 +19,18 @@ router.get("/activities", async (req, res, next) => {
     }
 })
 
-router.post('/create', async(req , res) => {
+router.post('/create',uploader.single("imageUrl"), async(req , res) => {
     try{
     let activityInfo = req.body
     activityInfo.materials = activityInfo.materials.split(",");
     activityInfo.skills = activityInfo.skills.split(",");
     activityInfo.steps = activityInfo.steps.split(",");
     console.log(activityInfo)
+    if (req.file) {
+        activityInfo.image = req.file.path;
+      }
 
-    /*activityMaterials = activityInfo.materials.split(",")
-    activitySkills = activityInfo.skills.split(",")
-    activitySteps = activityInfo.steps.split(",")*/
+   
     
     const newActivity = await Activity.create(activityInfo)
     res.redirect("/activities/activities")
