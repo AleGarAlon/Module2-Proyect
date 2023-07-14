@@ -53,6 +53,10 @@ app.get('/', (req, res) => {
     res.render('auth/login');
   });
   
+  app.get('/about-us', (req, res) => {
+    // Render the login page using the login.ejs file
+    res.render('partials/about-us');
+  });
 
 
 const activitiesRoutes = require('./routes/activities.routes')
