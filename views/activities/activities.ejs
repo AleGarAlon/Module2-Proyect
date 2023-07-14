@@ -1,9 +1,22 @@
 <%- include('../partials/head') %>
+<%- include('../partials/navbar-home') %>
 
+<div id="body-id" class="body-main container">
 
-<h1>Activities</h1>
+<main>
+    <header id="profile-id" class="profile-body">
+      <h1>Activities</h1>
+    </header>
 
-<% activities.forEach(activity => { %>
+    <% activities.forEach(activity => { %>
     <img src="<%-activity.image%>" alt="activityImg">
     <h3><%- activity.name %></h3>
-<% }) %>
+    <% }) %>
+
+
+</main>
+</div>
+
+<footer class="page-footer">
+    <%- include('../partials/footer') %>
+</footer>

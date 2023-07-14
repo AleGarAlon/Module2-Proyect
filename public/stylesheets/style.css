@@ -5,14 +5,12 @@ body
   margin: 0;
   padding: 0;
   font-family: Roboto;
-  line-height: 3.5em;
+  
 } 
-
 .body-main {
   margin-top: 100px ;
   padding: 0 20px;
 }
-
 h1,
 h2,
 h3,
@@ -33,7 +31,6 @@ h2 {
     text-align: center;
     text-transform: uppercase;
     line-height: 4em;
-    
 }
 h3 {
     font-size: 4.2em;
@@ -85,5 +82,19 @@ ul {
   display: flex;
   justify-content: space-evenly;
   height: 280px;
-  
   }
+.profile-body {
+  margin-top: 100px ;
+  padding: 0 20px;
+}
+
+
+.form-new {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
