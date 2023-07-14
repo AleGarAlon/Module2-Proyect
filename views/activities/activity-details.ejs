@@ -1,6 +1,18 @@
 <h2>Activity details</h2>
 
 
-    <h3><%-  %></h3>
+<h3><%- activity.name %></h3>
+<h4>Description:<%- activity.description %></h4>
+<h4>Duration:<%- activity.duration %>minutes.</h4>
+<h4>Age range<% activity.age.forEach(ageRanges => { %></h4>
+    <p><%- ageRanges %><p/>   
+<% })%>
+<h4>Skills<% activity.skills.forEach(element => { %></h4>
+    <p><%- element %><p/>
+<% }) %>
+<h4>Steps<% activity.steps.forEach(element => { %></h4>
+    <p><%- element %><p/>
+<% }) %>
+<img src="<%- activity.image %>" alt="">
     
     

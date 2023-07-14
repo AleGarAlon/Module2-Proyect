@@ -6,4 +6,5 @@
 <% activities.forEach(activity => { %>
     <img src="<%-activity.image%>" alt="activityImg">
     <h3><%- activity.name %></h3>
+    <button><a href="/activities/<%- activity._id %>">Activity details</a></button>
 <% }) %>

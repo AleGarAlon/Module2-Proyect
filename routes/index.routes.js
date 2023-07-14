@@ -13,3 +13,9 @@ router.get("/profile", isLoggedIn, (req, res, next) => {
   res.render("profile", { user: req.session.user });
 });
 module.exports = router;
+
+router.get("/about-us", (req, res, next) => {
+  
+  res.render("about-us");
+});
+module.exports = router;
