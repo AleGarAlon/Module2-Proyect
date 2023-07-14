@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 
 // TODO: Please make sure you edit the User model to whatever makes sense in this case
-const userSchema = new Schema(
+const kidSchema = new Schema(
   {
     name: {
       type: String,
@@ -9,30 +9,26 @@ const userSchema = new Schema(
       required: true,
       
     },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      lowercase: true,
-      trim: true
+    age : {
+        type: [String],
+        enum : ["0-1","1-2","3-4","5-6"],
+        required: true
     },
-    password: {
-      type: String,
-      required: true
+    parentId : {
+      type : String
     },
-    role : {
-      type: String,
-      default : "user",
-    },
-    kids: [
+    activities: [
       {
       type: Schema.Types.ObjectId,
-      ref:"Kid"
+      ref:"Activity"
       }
-      ]
-
-
-    
+      ],
+    done: [
+      {
+      type: Schema.Types.ObjectId,
+      ref:"Activity"
+      }
+      ],
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`    
@@ -40,6 +36,6 @@ const userSchema = new Schema(
   }
 );
 
-const User = model("User", userSchema);
+const Kid = model("Kid", kidSchema);
 
-module.exports = User;
+module.exports = Kid;

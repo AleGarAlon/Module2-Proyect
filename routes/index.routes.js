@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const { isLoggedIn, isAdmin } = require('../middlewares/route-guard.middleware')
+const Activity =require('../models/Activity.model');
+const Kid =require('../models/Kid.model');
 
 /* GET home page */
 router.get("/", (req, res, next) => {
@@ -18,4 +20,6 @@ router.get("/about-us", (req, res, next) => {
   
   res.render("about-us");
 });
+
+
 module.exports = router;
