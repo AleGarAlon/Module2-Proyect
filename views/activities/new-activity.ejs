@@ -2,40 +2,41 @@
 <%- include('../partials/navbar-home') %>
 
 <div id="body-id" class="container">
+
   <header id="profile-id" class="profile-body">
     <h2>Add a new activity</h2>
   </header>
+
   <div class="card-panel">
 
-  <main class="new-activity">
+    <main class="new-activity">
+
+      <form action="/activities/create" method="POST" enctype="multipart/form-data">
 
 
-    <form action="/activities/create" method="POST" enctype="multipart/form-data" >
-      
+        <div class="input-field">
+          <input name="name" placeholder=" " id="name" type="text" class="validate">
+          <label for="name">Name:</label>
+        </div>
 
-          <div class="input-field">
-            <input name="name" placeholder=" " id="name" type="text" class="validate">
-            <label for="name">Name:</label>
-          </div>
-         
-          <div class="input-field">
-            <input name="description" placeholder=" " id="description" type="text" class="validate">
-            <label for="description">Description:</label>
-          </div>
-         
-          <div class="choose-div" >
-            <label for="form-select-1" class="label-bottom"> Duration in minutes:    
-                  <select name="duration" id="form-select-1" class="browser-default" >
-                    <option value="" disabled selected>Choose your option:</option>
-                    <option value="5">5</option>
-                    <option value="15">15</option>
-                    <option value="30">30</option>
-                    <option value="60">60</option>
-                  </select>
-                </label>
-          </div>  
-       
-          <!--
+        <div class="input-field">
+          <input name="description" placeholder=" " id="description" type="text" class="validate">
+          <label for="description">Description:</label>
+        </div>
+
+        <div class="choose-div">
+          <label for="form-select-1" class="label-bottom"> Duration in minutes:
+            <select name="duration" id="form-select-1" class="browser-default">
+              <option value="" disabled selected>Choose your option:</option>
+              <option value="5">5</option>
+              <option value="15">15</option>
+              <option value="30">30</option>
+              <option value="60">60</option>
+            </select>
+          </label>
+        </div>
+
+        <!--
           <div class="choose-div" >
             <label for="form-select-2" class="label-bottom">Age:</label>
             <select name="age" id="form-select-2" class="browser-default"multiple>
@@ -46,68 +47,68 @@
             </select>
             </div>   -->
 
-            <label for="form-select-2" class="choose-div label-bottom" >Age:</label>
-            <div class="choose-div checkbox-form">
-            <p>
-                <label>
-                    <input id="checkbox-1" type="checkbox" name="age" value="0-1">
-                    <span>0-1</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input id="checkbox-1" type="checkbox" name="age" value="1-2">
-                    <span>1-2</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input id="checkbox-1" type="checkbox" name="age" value="3-4">
-                    <span>3-4</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input id="checkbox-1" type="checkbox" name="age" value="5-6">
-                    <span>5-6</span>
-                </label>
-            </p>
-            </div>
-      
-           <div class="input-field image-field">
-            <input name="materials" type="text" placeholder=" ">
-            <label for="materials">Materials:</label>
-           </div>
-        
-            <div class="input-field field-bottom image-field">
-                <input name="skills" type="text" placeholder=" ">
-                <label for="skills">Skills:</label>
-            </div>
-        
-            <div class="input-field field-bottom image-field">
-                <input name="steps" type="text" placeholder=" ">
-            <label for="steps"> Steps:</label>
-            </div>
-       
-            <div class="image-field file-field input-field field-bottom">
-                <div class="btn">
-                  <span>Image:</span>
-                  <input type="file" name="imageUrl" accept="image/png, image/jpg" />
-                </div>
-                <div class="file-path-wrapper">
-                  <input class="file-path validate" type="text">
-                </div>
-            </div>
-       
-            <div class="button-center">
-            <button class="btn waves-effect waves-light" type="submit">Create
-                <i class="material-icons right">send</i>
-            </button>
-            </div>
+        <label for="form-select-2" class="choose-div label-bottom">Age:</label>
+        <div class="choose-div checkbox-form">
+          <p>
+            <label>
+              <input id="checkbox-1" type="checkbox" name="age" value="0-1">
+              <span>0-1</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input id="checkbox-1" type="checkbox" name="age" value="1-2">
+              <span>1-2</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input id="checkbox-1" type="checkbox" name="age" value="3-4">
+              <span>3-4</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input id="checkbox-1" type="checkbox" name="age" value="5-6">
+              <span>5-6</span>
+            </label>
+          </p>
+        </div>
 
-    </form>
+        <div class="input-field image-field">
+          <input name="materials" type="text" placeholder=" ">
+          <label for="materials">Materials:</label>
+        </div>
+
+        <div class="input-field field-bottom image-field">
+          <input name="skills" type="text" placeholder=" ">
+          <label for="skills">Skills:</label>
+        </div>
+
+        <div class="input-field field-bottom image-field">
+          <input name="steps" type="text" placeholder=" ">
+          <label for="steps"> Steps:</label>
+        </div>
+
+        <div class="image-field file-field input-field field-bottom">
+          <div class="btn">
+            <span>Image:</span>
+            <input type="file" name="imageUrl" accept="image/png, image/jpg" />
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+
+        <div class="button-center">
+          <button class="btn waves-effect waves-light" type="submit">Create
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+
+      </form>
     </main>
-    </div>
+  </div>
 </div>
 
 <footer class="page-footer">
