@@ -35,18 +35,44 @@
                 </label>
           </div>  
        
-
+          <!--
           <div class="choose-div" >
-            <label for="form-select-2" class="label-bottom">Age:
-            <select name="age" id="form-select-2" class="browser-default" >
-                <option value=" " disabled selected>Choose your option:</option>
-                <option value="0-1">0-1</option>
+            <label for="form-select-2" class="label-bottom">Age:</label>
+            <select name="age" id="form-select-2" class="browser-default"multiple>
+              <option value="0-1">0-1</option>
               <option value="1-2">1-2</option>
               <option value="3-4">3-4</option>
               <option value="5-6">5-6</option>
             </select>
-        </label>
-            </div>    
+            </div>   -->
+
+            <label for="form-select-2" class="choose-div label-bottom" >Age:</label>
+            <div class="choose-div checkbox-form">
+            <p>
+                <label>
+                    <input id="checkbox-1" type="checkbox" name="age" value="0-1">
+                    <span>0-1</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input id="checkbox-1" type="checkbox" name="age" value="1-2">
+                    <span>1-2</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input id="checkbox-1" type="checkbox" name="age" value="3-4">
+                    <span>3-4</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input id="checkbox-1" type="checkbox" name="age" value="5-6">
+                    <span>5-6</span>
+                </label>
+            </p>
+            </div>
       
            <div class="input-field image-field">
             <input name="materials" type="text" placeholder=" ">
