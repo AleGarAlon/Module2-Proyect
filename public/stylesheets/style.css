@@ -1,10 +1,17 @@
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
 html,
 body
-  {
+{
+  font-family: Roboto;
   margin: 0;
   padding: 0;
-  font-family: Roboto;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
 } 
 
 .body-main {
@@ -21,45 +28,6 @@ body
   padding-top: 20px;
 }
 
-/*
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-family: Roboto Condensed;
-   z-index:1;
-} 
-h1 {
-    font-size: 9em;
-    text-align: center;
-    text-transform: uppercase;
-     margin-top: 43px;
-}
-h2 {
-    font-size: 5em;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 4em;
-}
-h3 {
-    font-size: 4.2em;
-    text-align: center;
-    line-height: 1em;
-}
-h4 {
-    font-size: 1.5em;
-    letter-spacing: 0.4px;
-    line-height: 1em;
-}
-h5 {
-    font-size: 1.2em;
-    line-height: 1em;
-} 
-p {
-  text-justify: distribute;
-}*/
 .home-P {
   text-justify: distribute ;
 }
@@ -79,9 +47,10 @@ ul {
   padding: 0;
 }
 .page-footer{
-  position:relative;
+  position:absolute;
   bottom: 0;
   width: 100%;
+ 
 }
 .footer-copyright2 {
   font-size: small;
@@ -216,7 +185,6 @@ input[type="radio"], [type="checkbox"] {
     margin-right: 0 !important;
   }
 }
-
 .gallery {
   display: flex !important;
   flex-direction: row !important;
@@ -228,7 +196,6 @@ input[type="radio"], [type="checkbox"] {
   margin: 0 auto;
   padding: 20px 10px;
 }
-
 .gallery img {
   width: 100%;
   max-width: 350px;
@@ -240,7 +207,22 @@ input[type="radio"], [type="checkbox"] {
   display: flex ;
   flex-direction: row ;
   justify-content: center ;
-  
   max-width: 700px ;
   padding:20px;
+}
+
+.profile-column {
+  color: whitesmoke;
+}
+.responsive-img2 {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+} 
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+.content-wrap {
+  min-height: 100%;
 }
