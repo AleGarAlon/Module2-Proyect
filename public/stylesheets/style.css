@@ -121,7 +121,9 @@ form {
   margin: 0 auto;
   padding-bottom: 2em;
 }
-
+.checkbox-form {
+  padding-left: 4%;
+}
 
 fieldset {
   border: none;
@@ -213,4 +215,32 @@ input[type="radio"], [type="checkbox"] {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+}
+
+.gallery {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.act-card {
+  display: flex ;
+  flex-direction: row ;
+  justify-content: center ;
+  
+  max-width: 700px ;
+  padding:20px;
 }
