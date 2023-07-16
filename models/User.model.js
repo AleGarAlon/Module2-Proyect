@@ -6,7 +6,7 @@ const userSchema = new Schema(
     name: {
       type: String,
       trim: true,
-      required: false,
+      required: true,
       
     },
     email: {
@@ -24,15 +24,10 @@ const userSchema = new Schema(
       type: String,
       default : "user",
     },
-    kids: [
-      {
-      type: Schema.Types.ObjectId,
-      ref:"Childen"
-      }
-      ]
-
-
-    
+    kids: {
+      type: Array
+    }
+       
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`    
