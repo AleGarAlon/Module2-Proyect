@@ -1,4 +1,52 @@
-<h1>Profile of <%= user.name %></h1>
+<%- include('./partials/head') %>
+<%- include('./partials/navbar-profile')%>
+
+<div class="page-container">
+    <div class="content-wrap">
+    
+        <div class="row content-wrap">
+
+            <div class="profile-column col s12 m4 l4 blue darken-1">
+                
+                <header id="profile-id" class="profile-body">
+                    <h4 class="center small"><%= user.name %>'s Profile</h4>
+                </header>
+                <h5 class="profile-h5"><%= user.name %>'s Kids</h5>
+
+                <div class="card-image">
+                    <img class="responsive-img2" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+
+                <div class="card-image">
+                    <img class="responsive-img2" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg">
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    <!-- We need to add here the children's information -->
+                </div>
+
+            </div>
+
+            <div class="col s12 m8 l8 blue lighten-5">
+                <!-- Note that "m8 l9" was added -->
+                <!-- Teal page content
+        
+                    This content will be:
+                9-columns-wide on large screens,
+                8-columns-wide on medium screens,
+                12-columns-wide on small screens  -->
 
 
-<button><a href="/kids/newKid">New kid</a></button>
+            </div>
+
+        </div>
+
+    </div>
+    <footer class="page-footer">
+        <%- include('./partials/footer') %>
+    </footer>
+
+</div>
+
+<%- include('./partials/scripts') %>
+
+

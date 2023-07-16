@@ -17,12 +17,19 @@ router.get("/profile", isLoggedIn, async (req, res, next) => {
   
   res.render("profile", { user: req.session.user });
 });
-module.exports = router;
 
-router.get("/about-us", (req, res, next) => {
-  
-  res.render("about-us");
+/* GET about page */
+router.get("/about-us", isLoggedIn, (req, res, next) => {
+  console.log(req.session.user)
+  res.render("about-us", { user: req.session.user });
 });
+
+/* GET articles page */
+router.get("/articles", (req, res, next) => {
+  console.log(req.session.user)
+  res.render("articles", { user: req.session.user });
+});
+
 
 
 module.exports = router;

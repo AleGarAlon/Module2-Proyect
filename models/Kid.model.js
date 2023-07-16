@@ -39,3 +39,4 @@ const kidSchema = new Schema(
 const Kid = model("Kid", kidSchema);
 
 module.exports = Kid;
+
