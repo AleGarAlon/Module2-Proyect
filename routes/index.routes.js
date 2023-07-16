@@ -12,4 +12,20 @@ router.get("/profile", isLoggedIn, (req, res, next) => {
   console.log(req.session.user)
   res.render("profile", { user: req.session.user });
 });
+
+/* GET about page */
+router.get("/about-us", isLoggedIn, (req, res, next) => {
+  console.log(req.session.user)
+  res.render("about-us", { user: req.session.user });
+});
+
+/* GET articles page */
+router.get("/articles", (req, res, next) => {
+  console.log(req.session.user)
+  res.render("articles", { user: req.session.user });
+});
+
+
+
 module.exports = router;
+
