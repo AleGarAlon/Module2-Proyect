@@ -1,4 +1,10 @@
 <h1>Profile of <%= user.name %></h1>
 
+<% kids.forEach(kid => { %>
+ <div><a href="/kids/<%- kid._id %>"><%- kid.name %></a></div>
+<% }) %>
+
+
+
 
 <button><a href="/kids/newKid">New kid</a></button>

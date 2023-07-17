@@ -26,14 +26,17 @@ const activitySchema = new Schema(
       },
       materials : {
         type: [String],
+        trim: true,
         required: true
       },
       skills : {
         type: [String],
+        trim: true,
         required: true
       },
       steps : {
         type: [String],
+        trim: true,
         required: true
       },
       image : {
