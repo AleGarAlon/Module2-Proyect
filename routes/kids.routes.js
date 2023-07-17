@@ -14,6 +14,7 @@ router.get('/newKid' ,(request ,  response) =>{
 
 router.post('/newKid', async(req , res) => {
         const kidInfo = req.body
+        console.log(`The req body is :`,req.body)
         const parentInfo = req.session.user
         kidInfo.parentId = parentInfo._id
         console.log(kidInfo)
