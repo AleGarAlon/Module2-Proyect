@@ -39,7 +39,7 @@ router.get('/:kidId', async (req , res) =>{
     try{
         const kidId = req.params.kidId
         console.log(kidId)
-        const kidDetails = await kid.findById(kidId)
+        const kidDetails = await Kid.findById(kidId)
         console.log(kidDetails)
         res.render("kids/kid-info", {kid : kidDetails})
     }
