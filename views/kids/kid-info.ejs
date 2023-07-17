@@ -1,0 +1,18 @@
+<h2>Information about <%- kid.name %></h2>
+
+<h3><%- kid.name %></h3>
+<h4><%- kid.age %></h4>
+
+
+<h4>Activities for <%- kid.name %> </h4>
+<% kid.activities.forEach(activity => { %>
+    <div>
+ <img src="<%-activity.image%>" alt="<%- activity.name %>"><br>
+<button><a href="/activities/<%- activity._id %>">Activity details</a></button><br>
+ <h5><%- activity.name %></h5><br>
+ 
+ </div>
+<% }) %>
+
+
+
