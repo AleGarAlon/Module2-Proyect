@@ -12,17 +12,17 @@
                     <h4 class="center small"><%= user.name %>'s Profile</h4>
                 </header>
                 <h5 class="profile-h5"><%= user.name %>'s Kids</h5>
-
-                <div class="card-image">
+                <% kids.forEach(kid => { %>
+                  <div class="card-image">
                     <img class="responsive-img2" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    <p><%- kid.name %>'s profile</p>
+                    <button><a href="/kids/<%- kid._id %>">Details</a></button>
                 </div>
+                <% }) %>
 
-                <div class="card-image">
-                    <img class="responsive-img2" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg">
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    <!-- We need to add here the children's information -->
-                </div>
+               
+
+                
 
             </div>
 
