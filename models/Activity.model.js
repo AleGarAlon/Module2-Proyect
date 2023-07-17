@@ -6,7 +6,7 @@ const activitySchema = new Schema(
       name: {
         type: String,
         trim: true,
-        required: false,
+        required: true,
         unique: true,
         lowercase: true, 
       },

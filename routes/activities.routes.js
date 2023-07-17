@@ -1,22 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const uploader = require("../config/cloudinary.config.js");
-
 const Activity =require('../models/Activity.model');
 
 router.get("/activities", async (req, res, next) => {
     const allActivities =  await Activity.find()
     
     res.render("activities/activities", {activities : allActivities});
-  });
+});
 
-  router.get('/create' , async(request ,  response) =>{
-    try{
+router.get('/create' , (request ,  response) =>{
+    
         response.render("activities/new-activity")
-    }
-    catch (error) {
-        console.log(error)
-    }
+    
 })
 
 router.post('/create',uploader.single("imageUrl"), async(req , res) => {
