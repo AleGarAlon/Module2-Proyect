@@ -38,7 +38,6 @@
 html,
 body
 {
-  font-family: Roboto ;
   margin: 0;
   padding: 0;
   min-width: 100%;
@@ -81,6 +80,7 @@ ul {
   padding: 0;
 }
 
+
 .footer-copyright2 {
   font-size: small;
   background-color: #0E3E3A;
@@ -99,7 +99,8 @@ ul {
 }
 .footer-ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding-top: 15px;
 }
 @media (max-width:950px) {
   .footer-ul {
@@ -257,7 +258,6 @@ input[type="radio"], [type="checkbox"] {
 }
 .responsive-img2 {
   width: 100%;
-  
   object-fit: cover;
 } 
 .page-container {
@@ -266,4 +266,10 @@ input[type="radio"], [type="checkbox"] {
 }
 .content-wrap {
   min-height: 100%;
+}
+.capitalize  {
+  text-transform: capitalize;
+}
+.click-for-more {
+  color: #1976d2;
 }

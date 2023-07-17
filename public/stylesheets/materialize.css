@@ -2723,7 +2723,7 @@ ul.staggered-list li {
   }
 }
 
-@media only screen and (max-width :500px) {
+@media only screen and (max-width :710px) {
   .hide-on-med-and-down {
     display: none !important;
   }
@@ -3700,7 +3700,7 @@ nav ul:not(.dropdown-content) li {
 nav ul:not(.dropdown-content) a {
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: var(--font-on-primary-color-main);
   display: block;
   padding: 0 15px;
