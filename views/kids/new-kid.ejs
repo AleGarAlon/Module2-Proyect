@@ -12,7 +12,7 @@
 
     <main class="new-activity">
 
-      <form action="/activities/create-kid" method="POST" enctype="multipart/form-data">
+      <form action="/kids/newKid" method="POST">
 
 
         <div class="input-field">
@@ -20,11 +20,7 @@
           <label for="name">Name:</label>
         </div>
 
-        <div class="input-field">
-          <input name="kid-field-0" placeholder=" " id="kid-field-0" type="text" class="validate">
-          <label for="kid-field-0">Kid Field 0</label>
-        </div>
-
+       
         <label for="form-select-2" class="choose-div label-bottom">Age:</label>
         <div class="choose-div checkbox-form">
           <p>
@@ -53,22 +49,8 @@
           </p>
         </div>
 
-        <div class="input-field image-field">
-          <input name="kid-field-1" type="text" placeholder=" ">
-          <label for="kid-field-1">Kid Field 1</label>
-        </div>
 
-        <div class="input-field field-bottom image-field">
-          <input name="kid-field-2" type="text" placeholder=" ">
-          <label for="kid-field-2">Kid Field 2</label>
-        </div>
-
-        <div class="input-field field-bottom image-field">
-          <input name="kid-field-3" type="text" placeholder=" ">
-          <label for="kid-field-4"> Kid Field 3</label>
-        </div>
-
-        <div class="image-field file-field input-field field-bottom">
+        <!--<div class="image-field file-field input-field field-bottom">
           <div class="btn">
             <span>Photo</span>
             <input type="file" name="imageUrl" accept="image/png, image/jpg" />
@@ -76,7 +58,7 @@
           <div class="file-path-wrapper">
             <input class="file-path validate" type="text">
           </div>
-        </div>
+        </div>-->
 
         <div class="button-center">
           <button class="btn waves-effect waves-light" type="submit">Add!
