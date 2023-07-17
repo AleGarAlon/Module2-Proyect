@@ -18,13 +18,14 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(expressLayouts);
 
-// Disable caching for the routes that render your pages
+// Disable caching for the routes
 app.use((req, res, next) => {
     res.header('Cache-Control', 'no-store');
     next();
   });
-  
 
+//Dinamic title headers
+ 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require('./config')(app)
 require('./config/session')(app)
@@ -55,4 +56,3 @@ app.use('/kids', isLoggedIn, kidsRoutes)
 require('./error-handling')(app)
 
 module.exports = app
-

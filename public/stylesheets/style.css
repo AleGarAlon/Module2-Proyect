@@ -1,62 +1,41 @@
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
 html,
 body
-  {
+{
+  font-family: Roboto;
   margin: 0;
   padding: 0;
-  font-family: Roboto;
-  line-height: 3.5em;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
 } 
 
 .body-main {
   margin-top: 100px ;
-  padding: 0 20px;
+  padding: 0 28px;
+}
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-family: Roboto Condensed;
-   z-index:1;
-} 
-h1 {
-    font-size: 9em;
-    text-align: center;
-    text-transform: uppercase;
-     margin-top: 43px;
-}
-h2 {
-    font-size: 5em;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 4em;
-    
-}
-h3 {
-    font-size: 4.2em;
-    text-align: center;
-    line-height: 1em;
-}
-h4 {
-    font-size: 1.5em;
-    letter-spacing: 0.4px;
-    line-height: 1em;
-}
-h5 {
-    font-size: 1.2em;
-    line-height: 1em;
-} 
-p {
-  text-justify: distribute;
+.home-P {
+  text-justify: distribute ;
 }
 nav {
   overflow: visible !important;
 }
 .nav-bar {
-    background-color: #9AA6AC;
+   
     width: 100%;
     position: fixed;
     top: 0;
@@ -67,11 +46,23 @@ ul {
   margin: 0;
   padding: 0;
 }
-.footer-copyright {
+.page-footer{
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+ 
+}
+.footer-copyright2 {
   font-size: small;
+  background-color: #0E3E3A;
+  color: whitesmoke;
+  padding: 2px 0 2px 35px;
 }
 
-.footer-content, .footer-links {
+.footer-content  {
+  padding-left: 35px;
+}
+.footer-links {
   padding-right: 35px;
 }
 .footer-ul {
@@ -85,5 +76,153 @@ ul {
   display: flex;
   justify-content: space-evenly;
   height: 280px;
-  
   }
+.profile-body {
+  margin-top: 100px ;
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+.checkbox-form {
+  padding-left: 4%;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+input, textarea {
+  background-color: #F3F6FC;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.image-field {
+  margin-top: 5px;
+}
+
+.field-bottom {
+  margin-top: 30px;
+}
+
+.drop-down-bottom {
+  border-bottom: 1px solid #0a0a23;
+  padding-bottom: 10px;
+}
+.label-bottom {
+  padding-left: 15px;
+  font-size: medium;
+}
+
+.choose-div {
+  margin-top: 20px;
+}
+.button-center {
+  display:flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+fieldset {
+  border: none;
+  padding: 0.9rem 10;
+  display: flex;
+  flex-flow: column;
+  border-bottom: 2px solid #3b3b5f;
+}
+label, input {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+input[type="number"]{
+  width: 95px;
+}
+input[type="radio"], [type="checkbox"] {
+  display: inline;
+}
+
+#home-separator1 {
+  height: 50px;
+}
+#home-separator2 {
+  height: 200px;
+}
+
+
+.form-card {
+  display: flex !important;
+  justify-content: center !important;
+  margin-left: 28% !important;
+  margin-right: 28% !important;
+  max-width: 700px !important;
+}
+@media (max-width:800px) {
+  .form-card {
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+  }
+}
+@media (max-width:700px) {
+  .form-card {
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+  }
+}
+@media (max-width:600px) {
+  .form-card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+.gallery {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.act-card {
+  display: flex ;
+  flex-direction: row ;
+  justify-content: center ;
+  max-width: 700px ;
+  padding:20px;
+}
+
+.profile-column {
+  color: whitesmoke;
+}
+.responsive-img2 {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+} 
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+.content-wrap {
+  min-height: 100%;
+}

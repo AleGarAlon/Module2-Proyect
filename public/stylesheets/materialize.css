@@ -2173,7 +2173,7 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
+  font-size: 4%;
   margin: 0.67em 0;
 }
 
@@ -2723,7 +2723,7 @@ ul.staggered-list li {
   }
 }
 
-@media only screen and (max-width :400px) {
+@media only screen and (max-width :500px) {
   .hide-on-med-and-down {
     display: none !important;
   }
@@ -3935,22 +3935,22 @@ small {
 }
 @media only screen and (min-width: 750px) {
   .flow-text {
-    font-size: 1.512rem;
+    font-size: 1.20rem;
   }
 }
 @media only screen and (min-width: 780px) {
   .flow-text {
-    font-size: 1.536rem;
+    font-size: 1.25rem;
   }
 }
 @media only screen and (min-width: 810px) {
   .flow-text {
-    font-size: 1.56rem;
+    font-size: 1.29rem;
   }
 }
-@media only screen and (min-width: 840px) {
+@media only screen and (min-width: 960px) {
   .flow-text {
-    font-size: 1.584rem;
+    font-size: 1.3rem;
   }
 }
 @media only screen and (min-width: 870px) {
@@ -7797,8 +7797,8 @@ input[type=text].text-primary {
   --error-color: #CF6679;
   --slider-track-color: rgba(255, 255, 255, 0.26);
   --switch-thumb-off-color: #bababa;
-  --primary-color: #B39DDB;
-  --primary-color-dark: #9575CD;
+  --primary-color: #26A69A;
+  --primary-color-dark: #0E3E3A;
   --primary-color-numeric: 179, 157, 219;
   --primary-color-raised-hover-solid: #C2ACEA;
   --primary-color-raised-focus-solid: #DBC5FF;

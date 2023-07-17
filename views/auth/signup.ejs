@@ -1,16 +1,59 @@
+<%- include('../partials/head') %>
 
+<nav id="nav-bar" class="nav-bar">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li id="Home"><a href="/">Back</a></li>
+        <li id="sign-in"><a href="/auth/signup">Sign up</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <body class="body-wrapper ">
 
-<h1>Sign up</h1>
+    <div class="center-align">
 
-<form action="/auth/signup" method="POST">
-    <label >Name
-        <input name="name" required>
-    </label>
-    <label > Email
-        <input name="email" type="email" required>
-    </label>
-    <label > Password
-        <input name="password" type="password" required>
-    </label>
-    <button type="submit">Sign up</button>
-</form>
+      <div id="body-id" class="center-align ">
+        <header id="profile-id" class="profile-body">
+          <h1 class="center-align">Sign up</h1>
+        </header>
+        
+        
+        <div class="card-panel form-card z-depth-3 small-screen">
+
+          <form action="/auth/signup" method="POST">
+ 
+            <div class="input-field checkbox-form">
+              <input id="name" type="text" name="name" placeholder=" " class="validate" required>
+              <label for="name">Name</label>
+            </div>
+
+            <div class="input-field checkbox-form">
+              <input id="email" type="email" name="email" placeholder=" " class="validate" required>
+              <label for="name">Email</label>
+            </div>
+
+            <div class="input-field checkbox-form">
+              <input id="password" type="password" name="password" placeholder=" " class="validate" required>
+              <label for="name">Password</label>
+            </div>
+            
+            <div class="button-center checkbox-form">
+              <button class="btn waves-effect waves-light" type="submit">Sign up
+                <i class="material-icons right">send</i>
+              </button>
+
+          </form>
+
+        </div>
+
+      </div>
+      
+      
+    </div>
+
+    <%- include('../partials/scripts') %>
+
+  </body>

@@ -1,10 +1,51 @@
 <%- include('../partials/head') %>
+<%- include('../partials/navbar-profile') %>
 
+<div id="body-id" class="body-main container">
 
-<h1>Activities</h1>
-
-<% activities.forEach(activity => { %>
-    <img src="<%-activity.image%>" alt="activityImg">
+<main>
+    <header id="profile-id" class="profile-body center">
+      <h1>Activities</h1>
+    </header>
+<!-- Commented out but not deleted, just in case we need to review previous setup
+    <% activities.forEach(activity => { %>
+    <div class="gallery">
+      <img class="gallery img" src="<%-activity.image%>" alt="activityImg">
     <h3><%- activity.name %></h3>
-    <button><a href="/activities/<%- activity._id %>">Activity details</a></button>
+    </div>  
+    <% }) %>
+-->
+
+<div class="hoverable gallery">
+<% activities.forEach(activity => { %>
+
+<div class="act-card">
+  <div class="card act-car hoverable">
+    <div class="card-image">
+      <!-- insert activity.image when ready to merge with main branch-->
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
+      <div class="activator waves-effect waves-light" style="position:absolute;top:0;bottom:0;right:0;left:0;">
+      </div>
+    </div>
+    <div class="card-content">
+      <span class="card-title activator"><%- activity.name %><i class="material-icons right">more_vert</i></span>
+      <p><a href="#">This is a link</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title"><i class="material-icons right">close</i>Card Title</span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>  
+  </div>
+</div>
 <% }) %>
+</div>
+
+</main>
+</div>
+
+<!-- 
+<footer class="page-footer">
+    //- include('../partials/footer') %>
+</footer>
+-->
+
