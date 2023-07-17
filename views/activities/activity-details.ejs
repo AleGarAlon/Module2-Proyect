@@ -1,22 +1,46 @@
-<h2>Activity details</h2>
+<%- include('../partials/head') %>
+<%- include('../partials/navbar-profile') %>
+ 
 
+<div class=" body-main page-container">
+    <div class="content-wrap">
+    
+        <div class="row content-wrap">
 
+            <div class="profile-column col s12 m6 l6 blue darken-1">
+                
+<h2>Activity:</h2>
 <h3><%- activity.name %></h3>
-<h4>Description:<%- activity.description %></h4>
+
+<h4>Description: <%- activity.description %></h4>
+
 <h4>Duration:<%- activity.duration %>minutes.</h4>
+
 <h4>Age range<% activity.age.forEach(ageRanges => { %></h4>
-    <p><%- ageRanges %><p/>   
+    <p><%- ageRanges %></p>   
 <% })%>
+
 <h4>Skills<% activity.skills.forEach(element => { %></h4>
-    <p><%- element %><p/>
+    <p><%- element %></p>
 <% }) %>
+
 <h4>Materials<% activity.materials.forEach(element => { %></h4>
-    <p><%- element %><p/>
+    <p><%- element %></p>>
 <% }) %>     
+
 <h4>Steps<% activity.steps.forEach(element => { %></h4>
-    <p><%- element %><p/>
+    <p><%- element %></p>
 
 <% }) %>
-<img src="<%- activity.image %>" alt="">
+
+
     
-    
+</div>
+<div class="col s12 m6 l6 blue lighten-5">
+<img class="z-depth-2 responsive-img2" src="<%- activity.image %>" alt="">
+</div>
+</div>
+
+</div>
+
+</div>

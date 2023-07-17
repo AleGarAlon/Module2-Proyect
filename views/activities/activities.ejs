@@ -16,11 +16,11 @@
     <% }) %>
 -->
 
-<div class="hoverable gallery">
+<div class="gallery">
 <% activities.forEach(activity => { %>
 
-<div class="act-card">
-  <div class="card act-car hoverable">
+<div class="act-card ">
+  <div class="card act-car hoverable z-depth-3">
     <div class="card-image">
       <!-- insert activity.image when ready to merge with main branch-->
       <img src="<%- activity.image %>">
@@ -28,11 +28,13 @@
       </div>
     </div>
     <div class="card-content">
-      <span class="card-title activator"><%- activity.name %><i class="material-icons right">more_vert</i></span>
-      <p><a href="/activities/<%- activity._id %>">Activity description</a></p>
+      <span class="capitalize card-title activator"><%- activity.name %></span>
+      <h6><a class="click-for-more"  href="/activities/<%- activity._id %>">Click here for more details</a></h6>
     </div>
     <div class="card-reveal">
-      <span class="card-title"><i class="material-icons right">close</i><%- activity.name %></span>
+
+      <span class="capitalize card-title"><%- activity.name %><i class="material-icons right">close</i></span>
+
       <p><%- activity.description %></p>
     </div>  
   </div>

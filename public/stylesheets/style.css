@@ -1,9 +1,43 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style:normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
 html,
 body
 {
-  font-family: Roboto;
   margin: 0;
   padding: 0;
   min-width: 100%;
@@ -35,7 +69,6 @@ nav {
   overflow: visible !important;
 }
 .nav-bar {
-   
     width: 100%;
     position: fixed;
     top: 0;
@@ -46,12 +79,8 @@ ul {
   margin: 0;
   padding: 0;
 }
-.page-footer{
-  position:absolute;
-  bottom: 0;
-  width: 100%;
- 
-}
+
+
 .footer-copyright2 {
   font-size: small;
   background-color: #0E3E3A;
@@ -60,17 +89,30 @@ ul {
 }
 
 .footer-content  {
+  padding-top: 20px;
   padding-left: 35px;
 }
 .footer-links {
+  padding-top: 20px;
+  padding-left: 35px;
   padding-right: 35px;
 }
 .footer-ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding-top: 15px;
+}
+@media (max-width:950px) {
+  .footer-ul {
+    display: none;
+  }
+  .footer-h5 {
+    display: none;
+  }
 }
 .footer-h5 {
-  padding: 0;
+  padding: 20px 0;
+  margin: 0;
 }
 #general-information {
   display: flex;
@@ -216,7 +258,6 @@ input[type="radio"], [type="checkbox"] {
 }
 .responsive-img2 {
   width: 100%;
-  height: 200px; 
   object-fit: cover;
 } 
 .page-container {
@@ -225,4 +266,10 @@ input[type="radio"], [type="checkbox"] {
 }
 .content-wrap {
   min-height: 100%;
+}
+.capitalize  {
+  text-transform: capitalize;
+}
+.click-for-more {
+  color: #1976d2;
 }
