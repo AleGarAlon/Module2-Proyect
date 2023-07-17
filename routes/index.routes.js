@@ -13,9 +13,10 @@ router.get("/", (req, res, next) => {
 /* GET profile page */
 router.get("/profile", isLoggedIn, async (req, res, next) => {
   const parentInfo = req.session.user
-  
-  
-  res.render("profile", { user: req.session.user });
+  const kidsInfo = await Kid.find( { parentId: parentInfo._id })
+  console.log(parentInfo)
+  console.log(kidsInfo)
+  res.render("profile", { user: req.session.user , kids : kidsInfo});
 });
 
 /* GET about page */
