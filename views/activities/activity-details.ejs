@@ -3,66 +3,62 @@
 
 
 <div class="body-main-act page-container">
-    
-    <div class="content-wrap">
 
-        <div class="row content-wrap">
+  <div class="content-wrap">
 
-            <div class=" hoverable profile-column col s10 m10 offset-l1 l10 blue darken-1">
+    <div class="row content-wrap">
 
-                <div class=" col s12 m10 l10">
-                    <h3 Class="h3-overlay activity-detail-header capitalize"><%- activity.name %></h3>
-                    <img class="photo responsive-img2 " src="<%- activity.image %>" alt="">
+      <div class=" hoverable profile-column col s10 m10 offset-l1 l10 blue darken-1">
 
-                </div>
-
-                <h5 class="h-shadow-w h5-p">Description:</h5>
-                <p class=" h-shadow-w activities-p"><%- activity.description %></p>
-
-                <h5 class=" h-shadow-w h5-p">Duration:</h5>
-                <p class=" h-shadow-w h-shadow-w activities-p"><%- activity.duration %>minutes.</p>
-
-                <h5 class="h-shadow-w h5-p">Age range</h5>
-                <p><% activity.age.forEach(ageRanges => { %></p>
-                <p class="h-shadow-w activities-p"><%- ageRanges %></p>
-                <% })%>
-
-                <h5 class="h-shadow-w h5-p">Skills</h5>
-                <p><% activity.skills.forEach(element => { %></p>
-                <p class="h-shadow-w activities-p"><%- element %></p>
-                <% }) %>
-
-                <h5 class="h-shadow-w h5-p">Materials</h5>
-                <p><% activity.materials.forEach(element => { %></p>
-                <p class="h-shadow-w activities-p"><%- element %></p>
-                <% }) %>
-
-
-                <h5 class="h-shadow-w h5-p">Steps</h5>
-                <ol>
-                    <% activity.steps.forEach(element => { %>
-                    <li class="h-shadow-w activities-ol"><%- element %></li>
-                    <% }) %>
-                </ol>
-                <br>
-
-
-            </div>
+        <div class=" col s12 m10 l10">
+          <h3 Class="h3-overlay activity-detail-header capitalize"><%- activity.name %></h3>
+          <img class="photo responsive-img2 " src="<%- activity.image %>" alt="">
 
         </div>
 
+        <h5 class="h-shadow-w h5-p">Description:</h5>
+        <p class=" h-shadow-w activities-p"><%- activity.description %></p>
+
+        <h5 class=" h-shadow-w h5-p">Duration:</h5>
+        <p class=" h-shadow-w h-shadow-w activities-p"><%- activity.duration %>minutes.</p>
+
+        <h5 class="h-shadow-w h5-p">Age range</h5>
+        <p><% activity.age.forEach(ageRanges => { %></p>
+        <p class="h-shadow-w activities-p"><%- ageRanges %></p>
+        <% })%>
+
+        <h5 class="h-shadow-w h5-p">Skills</h5>
+        <p><% activity.skills.forEach(element => { %></p>
+        <p class="h-shadow-w activities-p"><%- element %></p>
+        <% }) %>
+
+        <h5 class="h-shadow-w h5-p">Materials</h5>
+        <p><% activity.materials.forEach(element => { %></p>
+        <p class="h-shadow-w activities-p"><%- element %></p>
+        <% }) %>
+
+
+        <h5 class="h-shadow-w h5-p">Steps</h5>
+        <ol>
+          <% activity.steps.forEach(element => { %>
+          <li class="h-shadow-w activities-ol"><%- element %></li>
+          <% }) %>
+        </ol>
+        <br>
+
+        <button class="btn z-depth-1 waves-effect waves-light">
+            <a class="h-shadow-w" href="/activities/<%- activity._id%>/update">Update activity</a>
+        </button>
+        
+        <form action="/activities/<%- activity._id %>/delete" method="POST">
+          <button class="btn z-depth-1 waves-effect waves-light" type="submit">Delete activity</button>
+        </form>
+
+      </div>
+
     </div>
 
-</div>
-<div class="col s12 m6 l6 blue lighten-5">
-<img class="z-depth-2 responsive-img2" src="<%- activity.image %>" alt="">
-<button><a href="/activities/<%- activity._id%>/update">Update activity</a></button><br>
-<form action="/activities/<%- activity._id %>/delete" method="POST">
-    <button type="submit">Delete activity</button>
-</form>
-</div>
-</div>
-
+  </div>
 
 </div>
 

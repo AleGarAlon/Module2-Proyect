@@ -11,19 +11,23 @@
                 <header id="profile-id" class="profile-body">
 
                     <h4 class="center small h-shadow-w"><%= user.name %>'s Profile</h4>
-                    <button><a href="/logout">Logout</a></button>
-                    <button><a href="/<%- user._id %>/update">Update profile</a></button><br>
-                    <!--<form action="/<%- user._id %>/delete" method="POST">
-                        <button type="submit">Delete profile</button>
-                    </form>-->
+                    
 
                 </header>
 
                 <div class="button-center">
                     <button class="btn z-depth-1 waves-effect waves-light" type="submit">
-                        <a class="add-kid" href="/kids/newKid">Add a kid</a>
+                        <a class="h-shadow-w add-kid" href="/kids/newKid">Add a kid</a>
                         <i class="material-icons right">person_add</i>
                     </button>
+
+                    <button class="btn z-depth-1 waves-effect waves-light"><a class="h-shadow-w" href="/logout">Logout</a></button>
+                    <button class="btn z-depth-1 waves-effect waves-light"><a class="h-shadow-w" href="/<%- user._id %>/update">Update profile</a>
+                    </button>
+                    <!--<form action="/<%- user._id %>/delete" method="POST">
+                        <button type="submit">Delete profile</button>
+                    </form>-->
+
                 </div>
                
             </div>
