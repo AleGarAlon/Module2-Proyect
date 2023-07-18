@@ -1,0 +1,36 @@
+<%- include('./partials/head') %>
+<%- include('./partials/navbar-profile') %>
+
+<div id="body-id" class="container">
+
+  <header id="profile-id" class="profile-body center">
+    <h2>Update your profile</h2>
+  </header>
+
+  <div class="card-panel form-card z-depth-3 small-screen">
+
+    <form action="/<%- user._id%>/update" method="POST">
+
+      <div class="input-field checkbox-form">
+        <input id="name" type="text" name="name" placeholder=" " class="validate" required>
+        <label for="name">Name</label>
+      </div>
+
+      <div class="input-field checkbox-form">
+        <input id="password" type="password" name="password" placeholder=" " class="validate" required>
+        <label for="name">Password</label>
+      </div>
+      
+      <div class="button-center checkbox-form">
+        <button class="btn waves-effect waves-light" type="submit">Update
+          <i class="material-icons right">send</i>
+        </button>
+
+    </form>
+
+  </div>
+</div>
+
+<footer class="page-footer">
+  <%- include('./partials/footer') %>
+</footer>

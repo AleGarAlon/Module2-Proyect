@@ -2,6 +2,13 @@
 
 <h3><%- kid.name %></h3>
 <h4><%- kid.age %></h4>
+<button><a href="/kids/<%- kid._id %>/update">Update kid</a></button><br>
+<form action="/kids/<%- kid._id %>/delete" method="POST">
+    <button type="submit">Delete kid</button>
+</form>
+
+
+
 
 
 <h4>Activities for <%- kid.name %> </h4>
