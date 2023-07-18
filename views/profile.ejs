@@ -10,9 +10,7 @@
                 
                 <header id="profile-id" class="profile-body">
                     <h4 class="center small"><%= user.name %>'s Profile</h4>
-                    <!--<form action="/auth/logout" method="POST">
-                        <button type="submit">Logout</button>
-                      </form>-->
+                    <button><a href="/logout">Logout</a></button>
                     <button><a href="/<%- user._id %>/update">Update profile</a></button><br>
                     <!--<form action="/<%- user._id %>/delete" method="POST">
                         <button type="submit">Delete profile</button>
@@ -58,10 +56,6 @@
 </div>
 
 <%- include('./partials/scripts') %>
-
-<% kids.forEach(kid => { %>
- <div><a href="/kids/<%- kid._id %>"><%- kid.name %></a></div>
-<% }) %>
 
 
 

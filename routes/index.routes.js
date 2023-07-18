@@ -27,7 +27,7 @@ router.get("/articles", (req, res, next) => {
   res.render("articles", { user: req.session.user });
 });
 
-router.get('/:userId/update', async (req , res) =>{
+router.get('/:userId/update',isLoggedIn, async (req , res) =>{
   try{
       const userId = req.params.userId
       const userDetails = await User.findById(userId)
@@ -38,7 +38,7 @@ router.get('/:userId/update', async (req , res) =>{
   }
 })
 
-router.post("/:userId/update", async (req, res, next) => {
+router.post("/:userId/update",isLoggedIn, async (req, res, next) => {
   const userInfo = req.body
   const userId = req.params.userId
 try{
@@ -52,6 +52,17 @@ console.log(error)
 }
 
 })
+
+
+router.get('/logout',isLoggedIn, (req, res, next) => {
+  console.log(req.session)
+  req.session.destroy((err) => {
+      if (err) {
+        console.log(err);
+      }
+      res.redirect("/");
+    });
+}); 
 /*router.post("/:userId/delete", async (req, res, next) => {
   const userId = req.params.userId
   console.log(userId)
