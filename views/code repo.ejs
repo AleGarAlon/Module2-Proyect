@@ -41,3 +41,13 @@
   <footer class="page-footer">
     <%- include('../partials/footer') %>
   </footer>
+
+
+
+  
+<%- include('./partials/scripts') %>
+
+<% kids.forEach(kid => { %>
+ <div><a href="/kids/<%- kid._id %>"><%- kid.name %></a></div>
+<% }) %>
+
