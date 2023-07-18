@@ -1,19 +1,18 @@
 @font-face {
-  font-family: 'Material Icons';
-  font-style:normal;
+  font-family: "Material Icons";
+  font-style: normal;
   font-weight: 400;
   src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
+    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
+    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
 }
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 24px; /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -31,13 +30,12 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* Support for IE. */
-  font-feature-settings: 'liga';
+  font-feature-settings: "liga";
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700");
 html,
-body
-{
+body {
   margin: 0;
   padding: 0;
   min-width: 100%;
@@ -46,11 +44,18 @@ body
   min-height: 100%;
   height: 100%;
   max-height: 100%;
-} 
+}
 
 .body-main {
-  margin-top: 100px ;
+  margin-top: 100px;
   padding: 0 28px;
+}
+.body-main-act {
+  margin-top: 60px;
+  padding: 0 28px;
+}
+.content-wrap {
+min-height: 100vh ;
 }
 #page-container {
   position: relative;
@@ -63,64 +68,74 @@ body
 }
 
 .home-P {
-  text-justify: distribute ;
+  text-justify: distribute;
 }
 nav {
   overflow: visible !important;
 }
 .nav-bar {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index:3;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-
+.add-kid{
+  color: white;
+  border-radius: 0px;
+}
 
 .footer-copyright2 {
   font-size: small;
-  background-color: #0E3E3A;
+  background-color: #0e3e3a;
   color: whitesmoke;
   padding: 2px 0 2px 35px;
 }
 
-.footer-content  {
-  padding-top: 20px;
+.footer-content {
+  padding-top: 15px;
   padding-left: 35px;
 }
 .footer-links {
-  padding-top: 20px;
+  padding-top: 15px;
   padding-left: 35px;
   padding-right: 35px;
 }
 .footer-ul {
   display: flex;
   justify-content: space-evenly;
+  height: 50px;
   padding-top: 15px;
 }
-@media (max-width:950px) {
-  .footer-ul {
-    display: none;
-  }
-  .footer-h5 {
+.material-icons {
+  font-size: 40px;
+}
+
+@media (max-width: 950px) {
+  .footer-content {
     display: none;
   }
 }
-.footer-h5 {
-  padding: 20px 0;
+.footer-p {
   margin: 0;
+  padding-bottom: 20px;
+}
+.footer-h5 {
+  padding-bottom: 20px;
+  margin: 0;
+  font-weight: bold;
 }
 #general-information {
   display: flex;
   justify-content: space-evenly;
   height: 280px;
-  }
+}
 .profile-body {
-  margin-top: 100px ;
+  margin-top: 100px;
   padding: 0 20px;
   padding-bottom: 20px;
 }
@@ -142,8 +157,10 @@ fieldset {
   border-bottom: 3px solid #3b3b4f;
 }
 
-input, textarea {
-  background-color: #F3F6FC;
+
+input,
+textarea {
+  background-color: #f3f6fc;
   border: 1px solid #0a0a23;
   color: #ffffff;
 }
@@ -169,9 +186,11 @@ input, textarea {
   margin-top: 20px;
 }
 .button-center {
-  display:flex;
+  display: flex;
   margin-top: 30px;
+  margin-bottom: 30px;
   justify-content: center;
+
 }
 fieldset {
   border: none;
@@ -180,17 +199,19 @@ fieldset {
   flex-flow: column;
   border-bottom: 2px solid #3b3b5f;
 }
-label, input {
+label,
+input {
   display: block;
   margin: 0.5rem 0;
   font-size: 17px;
   font-weight: normal;
 }
 
-input[type="number"]{
+input[type="number"] {
   width: 95px;
 }
-input[type="radio"], [type="checkbox"] {
+input[type="radio"],
+[type="checkbox"] {
   display: inline;
 }
 
@@ -201,7 +222,6 @@ input[type="radio"], [type="checkbox"] {
   height: 200px;
 }
 
-
 .form-card {
   display: flex !important;
   justify-content: center !important;
@@ -209,19 +229,19 @@ input[type="radio"], [type="checkbox"] {
   margin-right: 28% !important;
   max-width: 700px !important;
 }
-@media (max-width:800px) {
+@media (max-width: 800px) {
   .form-card {
     margin-left: 15% !important;
     margin-right: 15% !important;
   }
 }
-@media (max-width:700px) {
+@media (max-width: 700px) {
   .form-card {
     margin-left: 10% !important;
     margin-right: 10% !important;
   }
 }
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .form-card {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -246,30 +266,96 @@ input[type="radio"], [type="checkbox"] {
   border-radius: 10px;
 }
 .act-card {
-  display: flex ;
-  flex-direction: row ;
-  justify-content: center ;
-  max-width: 700px ;
-  padding:20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 700px;
+  padding: 20px;
 }
 
 .profile-column {
   color: whitesmoke;
-}
+  border-radius: 0px;
+  min-height: fit-content;
+  margin-bottom: 30px;
+  }
 .responsive-img2 {
   width: 100%;
   object-fit: cover;
-} 
+  height: 300px;
+}
+.responsive-img3 {
+  width: 100%;
+  object-fit: cover;
+  
+}
+
 .page-container {
   position: relative;
   min-height: 100vh;
 }
-.content-wrap {
-  min-height: 100%;
-}
-.capitalize  {
+
+.capitalize {
   text-transform: capitalize;
 }
+.h5-p {
+  font-weight: 500;
+  margin-left: 35px;
+}
+
 .click-for-more {
   color: #1976d2;
+}
+.activity-detail-header {
+  margin: 10;
+  padding-left: 20px;
+}
+.activities-p {
+  font-size: 20px;
+  margin-top: 0;
+  margin-left: 65px;
+}
+.activities-ol {
+  font-size: 20px;
+  margin-top: 0;
+  margin-left: 30px;
+  padding: 9px;
+}
+.photo {
+  display: block;
+}
+
+.h3-overlay {
+  position: absolute;
+  color: whitesmoke; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.h-shadow-w {
+  color: whitesmoke; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.h-shadow-b {
+  color: black; 
+  text-shadow: 1px 1px 2px whitesmoke;
+}
+
+.responsive-img-h {
+height: fit-content;
+}
+
+.profile-stack {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  
+}
+.profile-stack-child {
+  margin: 10px 10px 10px 10px;
+  padding-right: 30px;
+  width: 100%;
+  z-index: 1
+}
+.profile-info-child {
+  margin-top: 50px;
+  width: 100%;
 }

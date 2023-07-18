@@ -1,37 +1,57 @@
 <%- include('../partials/head') %>
 <%- include('../partials/navbar-profile') %>
- 
 
-<div class=" body-main page-container">
-    <div class="content-wrap">
+
+<div class="body-main-act page-container">
     
+    <div class="content-wrap">
+
         <div class="row content-wrap">
 
-            <div class="profile-column col s12 m6 l6 blue darken-1">
-                
-<h2>Activity:</h2>
-<h3><%- activity.name %></h3>
+            <div class=" hoverable profile-column col s10 m10 offset-l1 l10 blue darken-1">
 
-<h4>Description: <%- activity.description %></h4>
+                <div class=" col s12 m10 l10">
+                    <h3 Class="h3-overlay activity-detail-header capitalize"><%- activity.name %></h3>
+                    <img class="photo responsive-img2 " src="<%- activity.image %>" alt="">
 
-<h4>Duration:<%- activity.duration %>minutes.</h4>
+                </div>
 
-<h4>Age range<% activity.age.forEach(ageRanges => { %></h4>
-    <p><%- ageRanges %></p>   
-<% })%>
+                <h5 class="h-shadow-w h5-p">Description:</h5>
+                <p class=" h-shadow-w activities-p"><%- activity.description %></p>
 
-<h4>Skills<% activity.skills.forEach(element => { %></h4>
-    <p><%- element %></p>
-<% }) %>
+                <h5 class=" h-shadow-w h5-p">Duration:</h5>
+                <p class=" h-shadow-w h-shadow-w activities-p"><%- activity.duration %>minutes.</p>
 
-<h4>Materials<% activity.materials.forEach(element => { %></h4>
-    <p><%- element %></p>>
-<% }) %>     
+                <h5 class="h-shadow-w h5-p">Age range</h5>
+                <p><% activity.age.forEach(ageRanges => { %></p>
+                <p class="h-shadow-w activities-p"><%- ageRanges %></p>
+                <% })%>
 
-<h4>Steps<% activity.steps.forEach(element => { %></h4>
-    <p><%- element %></p>
+                <h5 class="h-shadow-w h5-p">Skills</h5>
+                <p><% activity.skills.forEach(element => { %></p>
+                <p class="h-shadow-w activities-p"><%- element %></p>
+                <% }) %>
 
-<% }) %>
+                <h5 class="h-shadow-w h5-p">Materials</h5>
+                <p><% activity.materials.forEach(element => { %></p>
+                <p class="h-shadow-w activities-p"><%- element %></p>
+                <% }) %>
+
+
+                <h5 class="h-shadow-w h5-p">Steps</h5>
+                <ol>
+                    <% activity.steps.forEach(element => { %>
+                    <li class="h-shadow-w activities-ol"><%- element %></li>
+                    <% }) %>
+                </ol>
+                <br>
+
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 <div class="col s12 m6 l6 blue lighten-5">
@@ -43,6 +63,9 @@
 </div>
 </div>
 
-</div>
 
 </div>
+
+<footer class="page-footer">
+  <%- include('../partials/footer') %>
+</footer>

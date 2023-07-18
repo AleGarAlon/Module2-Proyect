@@ -2,53 +2,68 @@
 <%- include('./partials/navbar-profile')%>
 
 <div class="page-container">
+
     <div class="content-wrap">
     
         <div class="row content-wrap">
 
-            <div class="profile-column col s12 m4 l4 blue darken-1">
-                
+            <div class="profile-column col s12 m3 l3 blue darken-1 z-depth-2">
                 <header id="profile-id" class="profile-body">
-                    <h4 class="center small"><%= user.name %>'s Profile</h4>
+
+                    <h4 class="center small h-shadow-w"><%= user.name %>'s Profile</h4>
                     <button><a href="/logout">Logout</a></button>
                     <button><a href="/<%- user._id %>/update">Update profile</a></button><br>
                     <!--<form action="/<%- user._id %>/delete" method="POST">
                         <button type="submit">Delete profile</button>
                     </form>-->
+
                 </header>
-                <h5 class="profile-h5"><%= user.name %>'s Kids</h5>
-                <% kids.forEach(kid => { %>
-                  <div class="card-image">
-                    <img class="responsive-img2" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
-                    <p><%- kid.name %>'s profile</p>
-                    <button><a href="/kids/<%- kid._id %>">Details</a></button>
+
+                <div class="button-center">
+                    <button class="btn z-depth-1 waves-effect waves-light" type="submit">
+                        <a class="add-kid" href="/kids/newKid">Add a kid</a>
+                        <i class="material-icons right">person_add</i>
+                    </button>
                 </div>
-                <% }) %>
-                <button><a href="/kids/newKid">Add a kid</a></button>
-
-
-
                
-
-                
-
             </div>
 
-            <div class="col s12 m8 l8 blue lighten-5">
-                <!-- Note that "m8 l9" was added -->
-                <!-- Teal page content
-        
-                    This content will be:
-                9-columns-wide on large screens,
-                8-columns-wide on medium screens,
-                12-columns-wide on small screens  -->
+            <div class="col s12 m7 l9 ">
+                <h4 class="profile-h5 h-shadow-b"><%= user.name %>'s Kids</h4>
+                
+                <div class=" card-stacked profile-stack">
+                    <% kids.forEach(kid => { %>
+                    
+                        <div class="card horizontal profile-stack-child hoverable">
+                            <img class="responsive-img-h" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
+                            
+                            <div class="center-align profile-info-child"> 
+                                <H4 class="h-shadow-b"><%- kid.name %>'s profile</H4>                          
+                                                                                
+                                <div class="button-center">
+                                    <button class="btn z-depth-1 waves-effect waves-light" type="submit">
+                                        <a class="add-kid" href="/kids/<%- kid._id %>">Details</a>
+                                    </button>  
 
+                                </div>
+
+                            </div>   
+
+                        </div>
+
+                    <% }) %>
+
+                    <!--   <button><a href="/kids/%- kid._id %>">Details</a></button> -->
+                    <!--   <button><a href="/kids/newKid">Add a kid</a></button>  -->
+                                        
+                </div>
 
             </div>
 
         </div>
 
     </div>
+
     <footer class="page-footer">
         <%- include('./partials/footer') %>
     </footer>
@@ -56,7 +71,5 @@
 </div>
 
 <%- include('./partials/scripts') %>
-
-
 
 

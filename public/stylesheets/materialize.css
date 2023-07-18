@@ -4007,7 +4007,7 @@ small {
   transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
   padding: 24px;
   margin: 0.5rem 0 1rem 0;
-  border-radius: 12px;
+  border-radius: 0px;
   background-color: var(--background-color-card);
 }
 
@@ -4018,7 +4018,7 @@ small {
   transition: -webkit-box-shadow 0.25s;
   transition: box-shadow 0.25s;
   transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 .card .card-title {
   font-size: 24px;
@@ -4406,7 +4406,7 @@ small {
 .btn-flat {
   font-weight: 500;
   border: none;
-  border-radius: 4px;
+  border-radius: 0px;
   display: inline-block;
   height: 40px;
   line-height: 40px;
