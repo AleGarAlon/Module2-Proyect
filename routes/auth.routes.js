@@ -12,7 +12,6 @@ router.post('/signup', async(req, res, next) => {
     userInfo = req.body
     const salt = bcrypt.genSaltSync(13)
     userInfo.password = bcrypt.hashSync(userInfo.password, salt)
-    console.log(userInfo)
     try{
         const newUser = await User.create(userInfo)
         
@@ -29,18 +28,13 @@ router.get('/login', (req, res, next) => {
 })
 
 router.post('/login', async(req, res, next) => {
-    
     userInfo = req.body
-    console.log(userInfo)
-
     try{ 
     userExist = await User.findOne({email: userInfo.email})
-    console.log(userExist)
      if (userExist) {
         let passwordMatch = bcrypt.compareSync(userInfo.password,userExist.password)
         userExist.password ="*****"
         req.session.user=userExist
-        console.log(req.session.user)
         res.redirect("profile") 
      }
         
@@ -52,5 +46,7 @@ router.post('/login', async(req, res, next) => {
     }
     
 })
+
+
 
 module.exports = router;

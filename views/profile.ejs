@@ -9,7 +9,14 @@
 
             <div class="profile-column col s12 m3 l3 blue darken-1 z-depth-2">
                 <header id="profile-id" class="profile-body">
+
                     <h4 class="center small h-shadow-w"><%= user.name %>'s Profile</h4>
+                    <button><a href="/logout">Logout</a></button>
+                    <button><a href="/<%- user._id %>/update">Update profile</a></button><br>
+                    <!--<form action="/<%- user._id %>/delete" method="POST">
+                        <button type="submit">Delete profile</button>
+                    </form>-->
+
                 </header>
 
                 <div class="button-center">
@@ -62,3 +69,7 @@
     </footer>
 
 </div>
+
+<%- include('./partials/scripts') %>
+
+

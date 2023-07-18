@@ -37,6 +37,7 @@
                 <p class="h-shadow-w activities-p"><%- element %></p>
                 <% }) %>
 
+
                 <h5 class="h-shadow-w h5-p">Steps</h5>
                 <ol>
                     <% activity.steps.forEach(element => { %>
@@ -51,6 +52,17 @@
         </div>
 
     </div>
+
+</div>
+<div class="col s12 m6 l6 blue lighten-5">
+<img class="z-depth-2 responsive-img2" src="<%- activity.image %>" alt="">
+<button><a href="/activities/<%- activity._id%>/update">Update activity</a></button><br>
+<form action="/activities/<%- activity._id %>/delete" method="POST">
+    <button type="submit">Delete activity</button>
+</form>
+</div>
+</div>
+
 
 </div>
 
