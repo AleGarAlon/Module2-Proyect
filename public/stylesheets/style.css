@@ -87,7 +87,7 @@ ul {
 
 .footer-copyright2 {
   font-size: small;
-  background-color: #0e3e3a;
+  background-color: #e76f51;
   color: whitesmoke;
   padding: 2px 0 2px 35px;
 }
@@ -133,6 +133,9 @@ ul {
   .material-icons {
     font-size: 25px;
   }
+}
+.homebound-img {
+  max-width: 35px;
 }
 
 .footer-p {
