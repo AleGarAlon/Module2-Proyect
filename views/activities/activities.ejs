@@ -3,46 +3,52 @@
 
 <div id="body-id" class="body-main container">
 
-<main>
+  <main>
+
     <header id="profile-id" class="profile-body center">
       <h1>Activities</h1>
     </header>
-<!-- Commented out but not deleted, just in case we need to review previous setup
-    <% activities.forEach(activity => { %>
+
+    <!-- Commented out but not deleted, just in case we need to review previous setup
+      <% activities.forEach(activity => { %>
+      <div class="gallery">
+        <img class="gallery img" src="<%-activity.image%>" alt="activityImg">
+      <h3><%- activity.name %></h3>
+      </div>  
+      <% }) %>
+      -->
+
     <div class="gallery">
-      <img class="gallery img" src="<%-activity.image%>" alt="activityImg">
-    <h3><%- activity.name %></h3>
-    </div>  
-    <% }) %>
--->
+      <% activities.forEach(activity => { %>
 
-<div class="gallery">
-<% activities.forEach(activity => { %>
+      <div class="act-card ">
+        <div class="card act-car hoverable z-depth-3">
+          <div class="card-image">
+            <!-- insert activity.image when ready to merge with main branch-->
+            <img src="<%- activity.image %>">
+            <div class="activator waves-effect waves-light" style="position:absolute;top:0;bottom:0;right:0;left:0;"></div>
+          </div>
 
-<div class="act-card ">
-  <div class="card act-car hoverable z-depth-3">
-    <div class="card-image">
-      <!-- insert activity.image when ready to merge with main branch-->
-      <img src="<%- activity.image %>">
-      <div class="activator waves-effect waves-light" style="position:absolute;top:0;bottom:0;right:0;left:0;">
+          <div class="card-content">
+            <span class="capitalize card-title activator"><%- activity.name %></span>
+            <h6><a class="click-for-more" href="/activities/<%- activity._id %>">Click here for more details</a></h6>
+          </div>
+
+          <div class="card-reveal">
+            <span class="capitalize card-title"><%- activity.name %><i class="material-icons right">close</i></span>
+            <p><%- activity.description %></p>
+          </div>
+
+        </div>
+
       </div>
+
+      <% }) %>
+
     </div>
-    <div class="card-content">
-      <span class="capitalize card-title activator"><%- activity.name %></span>
-      <h6><a class="click-for-more"  href="/activities/<%- activity._id %>">Click here for more details</a></h6>
-    </div>
-    <div class="card-reveal">
 
-      <span class="capitalize card-title"><%- activity.name %><i class="material-icons right">close</i></span>
-
-      <p><%- activity.description %></p>
-    </div>  
-  </div>
-</div>
-<% }) %>
-</div>
-
-</main>
+  </main>
+  
 </div>
 
 
@@ -50,7 +56,4 @@
   <%- include('../partials/footer') %>
 </footer>
 
-
-
-
-  
+<%- include('../partials/scripts') %>

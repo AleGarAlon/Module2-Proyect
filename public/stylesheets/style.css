@@ -40,7 +40,6 @@ body {
   padding: 0;
  
 }
-
 .body-main {
   margin-top: 100px;
   padding: 0 28px;
@@ -49,11 +48,8 @@ body {
   margin-top: 60px;
   padding: 0 28px;
 }
-.content-wrap {
-height: 100vh;
-}
 #page-container {
-  position: relative;
+  
   min-height: 100vh;
 }
 
@@ -169,7 +165,7 @@ form {
 }
 .profile-column {
   color: whitesmoke;
-  height: 600px;
+  height: 100%;
   width: 350px;
   border-radius: 0px;
   background-color: #2a9d8f;
@@ -421,13 +417,14 @@ input[type="radio"],
 }
 
 .page-container {
-  position: relative;
-  min-height: 100vh;
+ 
+  min-height: 100%;
+  margin-bottom: 100px;
 }
 
 .page-container-add{
-  position:relative;
-  height: 79.7vh;
+  
+  height: 100%;
 }
 .capitalize {
   text-transform: capitalize;
