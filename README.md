@@ -145,7 +145,7 @@
 
 # Articles
 
-### in develop
+### Random articles
 
 # layout
 

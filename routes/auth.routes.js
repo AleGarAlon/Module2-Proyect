@@ -7,20 +7,27 @@ router.get('/signup', (req, res, next) => {
     res.render("auth/signup")
 })
 
-router.post('/signup', async(req, res, next) => {
-    
-    userInfo = req.body
-    const salt = bcrypt.genSaltSync(13)
-    userInfo.password = bcrypt.hashSync(userInfo.password, salt)
-    try{
-        const newUser = await User.create(userInfo)
-        
-     res.redirect("/")   
-    } catch (error){
-        console.log(error)
+
+
+router.post('/signup', async (req, res, next) => {
+    const uppercaseRegex = /^(?=.*[A-Z])/; 
+    const numberRegex = /^(?=.*\d)/; 
+    const userInfo = req.body;
+    const password = userInfo.password;
+
+    if (!uppercaseRegex.test(password) || !numberRegex.test(password) || password.length < 8) {
+        const errorMessage = "Password must be at least 8 characters long and contain at least one capital letter and one number.";
+        return res.render("auth/signup", { errorMessage });
     }
-    
-})
+    const salt = bcrypt.genSaltSync(13);
+    userInfo.password = bcrypt.hashSync(password, salt);   
+    try {
+        const newUser = await User.create(userInfo);
+        res.redirect("/");
+    } catch (error) {
+        console.log(error);
+    }
+});
 
 router.get('/login', (req, res, next) => {
     
@@ -37,7 +44,7 @@ router.post('/login', async(req, res, next) => {
         req.session.user=userExist
         res.redirect("profile") 
      }
-        
+       
      else{
         res.render('auth/login',{errorMsg: "Invalid email/password"})
      } 
@@ -46,7 +53,5 @@ router.post('/login', async(req, res, next) => {
     }
     
 })
-
-
 
 module.exports = router;
