@@ -44,18 +44,20 @@
           <li class="h-shadow-w activities-ol"><%- element %></li>
           <% }) %>
         </ol>
-        <br>
-
-        <button class="btn z-depth-1 waves-effect waves-light">
-            <a class="h-shadow-w" href="/activities/<%- activity._id%>/update">Update activity</a>
-        </button>
         
-        <form action="/activities/<%- activity._id %>/delete" method="POST">
-          <button class="btn z-depth-1 waves-effect waves-light" type="submit">Delete activity</button>
-        </form>
+        
+        <div class="button-center-act button-form-kids center">
 
+          <button class="btn z-depth-1 waves-effect waves-light">
+              <a class="h-shadow-w" href="/activities/<%- activity._id%>/update">Update activity</a>
+          </button>
+        
+          <form class=" button-form-kids" action="/activities/<%- activity._id %>/delete" method="POST">
+            <button class=" btn z-depth-1 waves-effect waves-light" type="submit">Delete activity</button>
+          </form>
+
+        </div>
       </div>
-
     </div>
 
   </div>

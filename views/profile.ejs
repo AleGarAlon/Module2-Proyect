@@ -7,7 +7,7 @@
     
         <div class="row content-wrap">
 
-            <div class="profile-column col s12 m3 l3 blue darken-1 z-depth-2">
+            <div class="profile-column col s12 m3 l3 blue darken-1 z-depth-5">
                 <header id="profile-id" class="profile-body">
 
                     <h4 class="center small h-shadow-w"><%= user.name %>'s Profile</h4>
@@ -15,27 +15,27 @@
 
                 </header>
 
-                <div class="button-center">
+                <div class="button-center-profile">
                     <button class="btn z-depth-1 waves-effect waves-light" type="submit">
                         <a class="h-shadow-w add-kid" href="/kids/newKid">Add a kid</a>
                         <i class="material-icons right">person_add</i>
                     </button>
 
-                    <button class="btn z-depth-1 waves-effect waves-light"><a class="h-shadow-w" href="/logout">Logout</a></button>
                     <button class="btn z-depth-1 waves-effect waves-light"><a class="h-shadow-w" href="/<%- user._id %>/update">Update profile</a>
                     </button>
                     <!--<form action="/<%- user._id %>/delete" method="POST">
                         <button type="submit">Delete profile</button>
                     </form>-->
+                    <button class="btn z-depth-1 waves-effect waves-light"><a class="h-shadow-w" href="/logout">Logout</a></button>
 
                 </div>
                
             </div>
 
-            <div class="col s12 m7 l9 ">
-                <h4 class="profile-h5 h-shadow-b"><%= user.name %>'s Kids</h4>
+            <div class="col s12 m7 l9 profile-stack">
+                <h4 class="profile-h5 h-shadow-b center"><%= user.name %>'s Kids</h4>
                 
-                <div class=" card-stacked profile-stack">
+                <div class=" card-stacked ">
                     <% kids.forEach(kid => { %>
                     
                         <div class="card horizontal profile-stack-child hoverable">
@@ -44,9 +44,9 @@
                             <div class="center-align profile-info-child"> 
                                 <H4 class="h-shadow-b"><%- kid.name %>'s profile</H4>                          
                                                                                 
-                                <div class="button-center">
+                                <div class="button-center-profile">
                                     <button class="btn z-depth-1 waves-effect waves-light" type="submit">
-                                        <a class="add-kid" href="/kids/<%- kid._id %>">Details</a>
+                                        <a class=" h-shadow-w add-kid" href="/kids/<%- kid._id %>">Details</a>
                                     </button>  
 
                                 </div>
@@ -75,5 +75,4 @@
 </div>
 
 <%- include('./partials/scripts') %>
-
 
