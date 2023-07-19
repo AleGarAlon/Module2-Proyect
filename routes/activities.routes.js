@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const uploader = require("../config/cloudinary.config.js");
 const ActivityBeta =require('../models/ActivityBeta.model');
+const Activity =require('../models/Activity.model');
 const { isAdmin } = require('../middlewares/route-guard.middleware')
 
 router.get("/activities", async (req, res, next) => {
@@ -31,25 +32,25 @@ router.post('/create',uploader.single("imageUrl"), async(req , res) => {
 })
 
 router.get('/createBeta' , (req ,  res) =>{
-    res.render("activities/new-activity")
+    res.render("activities/activity-beta")
     
 })
 
 router.post('/createBeta',uploader.single("imageUrl"), async(req , res) => {
     try{
     let activityInfo = req.body
-    activityInfo.materials = activityInfo.materials.split(",");
-    activityInfo.skills = activityInfo.skills.split(",");
-    activityInfo.steps = activityInfo.steps.split(",");
+    console.log(req.body)
+   
     if (req.file) {
         activityInfo.image = req.file.path;
       }
     const newActivity = await ActivityBeta.create(activityInfo)
-    res.redirect("profile")
+    res.redirect("/")
    } catch (error){
     console.log(error)
    }  
 })
+
 router.get('/:activityId', async (req , res) =>{
     try{
         const activityId = req.params.activityId
