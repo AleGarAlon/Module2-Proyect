@@ -7764,11 +7764,11 @@ input[type=text].text-primary {
   --switch-thumb-off-color: #ffffff;
   --carousel-indicator-color: rgba(255, 255, 255, 0.45);
   --carousel-indicator-active-color: #FFF;
-  --primary-color: #219187;        /*primary color */
+  --primary-color: #F4A261;        /*primary color */
   --primary-color-dark: #1D7D74;
   --primary-color-numeric: 38, 166, 154;
-  --primary-color-raised-hover-solid: #30B0A4;
-  --primary-color-raised-focus-solid: #44C4B8;
+  --primary-color-raised-hover-solid: #e9c46a;
+  --primary-color-raised-focus-solid: #e9c46a;
   --primary-color-font-medium-color: rgba(var(--primary-color-numeric), 0.7);
   --primary-color-font-disabled-color: rgba(var(--primary-color-numeric), 0.4);
   --primary-color-hover-opaque: rgba(var(--primary-color-numeric), 0.06);
@@ -7803,7 +7803,7 @@ input[type=text].text-primary {
   --slider-track-color: rgba(255, 255, 255, 0.26);
   --switch-thumb-off-color: #bababa;
   --primary-color: #26A69A;
-  --primary-color-dark: #0E3E3A;
+  --primary-color-dark: ##F4A261;
   --primary-color-numeric: 179, 157, 219;
   --primary-color-raised-hover-solid: #C2ACEA;
   --primary-color-raised-focus-solid: #DBC5FF;
