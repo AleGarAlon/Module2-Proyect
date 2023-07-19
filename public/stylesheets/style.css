@@ -111,11 +111,30 @@ ul {
   font-size: 40px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 990px) {
   .footer-content {
     display: none;
   }
+  .footer-links {
+    padding-bottom: 35px;
+  }
 }
+@media (max-width: 800px) {
+  .material-icons {
+    font-size: 32px;
+  }
+}
+@media (max-width: 500px) {
+  .material-icons {
+    font-size: 28px;
+  }
+}
+@media (max-width: 350px) {
+  .material-icons {
+    font-size: 25px;
+  }
+}
+
 .footer-p {
   margin: 0;
   padding-bottom: 20px;
@@ -241,10 +260,11 @@ input[type="radio"],
 }
 
 #home-separator1 {
-  height: 50px;
+  height: 500px;
 }
+
 #home-separator2 {
-  height: 200px;
+  height: 100px;
 }
 
 .form-card {
