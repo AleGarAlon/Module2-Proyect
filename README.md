@@ -63,9 +63,11 @@
 
 # Additional design features
 
-### A new list of activities already completed by the kids
+### A new list of activities already completed by the kids.
 
-### The articles section
+### A form to search for older articles in the article page.
+
+### A way for user to send posible new activities to the admins
 
 ### A way for user to send ideas for new activities
 
@@ -193,6 +195,7 @@
 ### Article model
 ### Middleware (IsAdmin)
 ### Increase password requirements
+### Favicon 
 
 
 ## Task (Styles)
