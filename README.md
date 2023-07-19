@@ -125,7 +125,6 @@
 
 ### form
 
-
 # kid-info.ejs
 
 ### information about the kid
@@ -142,9 +141,21 @@
 
 # about-us
 
-### in develop
+### Information about the proyect
 
 # Articles
 
 ### in develop
+
+# layout
+
+### navbar for all pages
+### footer for all pages
+### script links
+
+# Stylesheets
+
+### materialize.css
+### materialize.min.css
+### Style
 
