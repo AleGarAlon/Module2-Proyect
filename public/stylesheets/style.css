@@ -87,7 +87,7 @@ ul {
 
 .footer-copyright2 {
   font-size: small;
-  background-color: #0e3e3a;
+  background-color: #e76f51;
   color: whitesmoke;
   padding: 2px 0 2px 35px;
 }
@@ -452,4 +452,7 @@ height: 380px;
 }
 .page-footer-form {
   position:relative
+}
+.logo-size {
+  max-width: 35px;
 }
