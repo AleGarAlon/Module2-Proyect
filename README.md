@@ -192,6 +192,7 @@
 ### Articles page
 ### Article model
 ### Middleware (IsAdmin)
+### Increase password requirements
 
 
 ## Task (Styles)
