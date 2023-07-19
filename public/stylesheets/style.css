@@ -40,7 +40,6 @@ body {
   padding: 0;
  
 }
-
 .body-main {
   margin-top: 100px;
   padding: 0 28px;
@@ -49,11 +48,8 @@ body {
   margin-top: 60px;
   padding: 0 28px;
 }
-.content-wrap {
-height: 100vh;
-}
 #page-container {
-  position: relative;
+  
   min-height: 100vh;
 }
 
@@ -135,6 +131,14 @@ ul {
   }
 }
 
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
 .footer-p {
   margin: 0;
   padding-bottom: 20px;
@@ -159,13 +163,54 @@ ul {
   padding: 0 20px;
   padding-bottom: 20px;
 }
+.profile-column {
+  color: whitesmoke;
+  height: 100%;
+  width: 350px;
+  border-radius: 0px;
+  background-color: #2a9d8f;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+.profile-stack-child {
+  margin-bottom: 11px;
+  width: 800px;
+  z-index: 0;
+}
 
-form {
-  width: 60vw;
-  max-width: 500px;
-  min-width: 300px;
-  margin: 0 auto;
-  padding-bottom: 2em;
+.profile-info-child {
+  margin-top: 50px;
+  width: 100%;
+}
+.profile-button-center{
+  display:flex;
+  margin-top: 30px;
+  justify-content: space-evenly;
+}
+.profile-button-center-sidebar {
+  display:flex;
+  flex-direction: column;
+  margin: 10px 0 15px 0;
+  align-items: center;
+}
+.profile-button-p{
+  width: 260px;
+  margin: 23px 0;
+}
+.profile-responsive-img-h {
+  height: 240px;
+  }
+  
+@media (max-width: 990px) {
+  .profile-responsive-img-h {
+    height: 240px;
+    }
+    
+}  
+.profile-card-stacked{ 
+  margin: 74px 0 0 0;
+  
+
 }
 .checkbox-form {
   padding-left: 4%;
@@ -208,10 +253,16 @@ textarea {
 .choose-div {
   margin-top: 20px;
 }
-.button-center-profile {
+.pofile-stack {
+  
   display: flex;
-  margin-top: 30px;
-  justify-content: space-evenly;
+  flex-direction: column;
+  
+  top: 200px;
+  right: 40px;
+  margin: 10px;
+  padding-right: 200px;
+  z-index: 0;
 }
 .button-center-add-child {
   display: flex;
@@ -226,10 +277,16 @@ textarea {
 }
 .button-center-act {
   display: flex;
+  flex-direction: column;
   padding-top: 33px;
   margin-bottom: 30px;
-  justify-content: space-evenly;
+  width: 200px;
 }
+.button-p{
+  width: 280px;
+  margin: 15px;
+}
+
 .button-form-kids {
   margin: 0;
   padding-left: 90px;
@@ -347,13 +404,7 @@ input[type="radio"],
   
 }
 
-.profile-column {
-  color: whitesmoke;
-  border-radius: 0px;
-  min-height: fit-content;
-  margin-bottom: 30px;
-  z-index: 1;
-  }
+
 .responsive-img2 {
   width: 100%;
   object-fit: cover;
@@ -366,13 +417,14 @@ input[type="radio"],
 }
 
 .page-container {
-  position: relative;
-  min-height: 100vh;
+ 
+  min-height: 100%;
+  margin-bottom: 100px;
 }
 
 .page-container-add{
-  position:relative;
-  height: 79.7vh;
+  
+  height: 100%;
 }
 .capitalize {
   text-transform: capitalize;
@@ -418,32 +470,6 @@ input[type="radio"],
   text-shadow: 0.5px 0.5px 1px whitesmoke;
 }
 
-.responsive-img-h {
-height: 380px;
-}
-
-.profile-stack {
-  position:sticky;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  top: 150px;
-  right: 40px;
-  margin: 10px;
-  padding-right: 200px;
-  z-index: 0;
-}
-.profile-stack-child {
-  margin: 10px 10px 10px 10px;
-  padding-right: 30px;
-  width: 95%;
-  z-index: 0
-}
-
-.profile-info-child {
-  margin-top: 50px;
-  width: 100%;
-}
 
 .kid-activity-card {
   display:flex;
