@@ -22,33 +22,34 @@
         
         
         <div class="card-panel form-card z-depth-3 small-screen">
-
           <form action="/auth/signup" method="POST">
- 
-            <div class="input-field checkbox-form">
-              <input id="name" type="text" name="name" placeholder=" " class="validate" required>
-              <label for="name">Name</label>
-            </div>
 
-            <div class="input-field checkbox-form">
-              <input id="email" type="email" name="email" placeholder=" " class="validate" required>
-              <label for="name">Email</label>
-            </div>
+              <div class="input-field checkbox-form">
+                <input id="name" type="text" name="name" placeholder=" " class="validate" required>
+                <label for="name">Name</label>
+              </div>
 
-            <div class="input-field checkbox-form">
-              <input id="password" type="password" name="password" placeholder=" " class="validate" required>
-              <label for="name">Password</label>
-            </div>
-            
-            <div class="button-center checkbox-form">
-              <button class="btn waves-effect waves-light" type="submit">Sign up
-                <i class="material-icons right">send</i>
-              </button>
-
+              <div class="input-field checkbox-form">
+                <input id="email" type="email" name="email" placeholder=" " class="validate" required>
+                <label for="name">Email</label>
+              </div>
+      
+              <div class="input-field checkbox-form">
+                  <input id="password" type="password" name="password" placeholder=" " class="validate" required>
+                  <label for="name">Password</label>
+              </div>
+      
+              <% if (typeof errorMessage !== 'undefined' && errorMessage !== null) { %>
+                  <p class="error-message"><%= errorMessage %></p>
+              <% } %>
+      
+              <div class="button-center checkbox-form">
+                  <button class="btn waves-effect waves-light" type="submit">Sign up
+                      <i class="material-icons right">send</i>
+                  </button>
+              </div>
           </form>
-
         </div>
-
       </div>
       
       

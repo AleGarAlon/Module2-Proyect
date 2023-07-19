@@ -145,7 +145,7 @@
 
 # Articles
 
-### in develop
+### Random articles
 
 # layout
 
@@ -159,3 +159,67 @@
 ### materialize.min.css
 ### Style
 
+## Task (back)
+
+### Create Repo
+### Add colaborator to repo
+### Create branches
+### Routes
+### Auth
+### Sign up page
+### Log in page
+### User model
+### Profile page
+### Middlewares (IsLoggIn and IsLoggedOut)
+### Cloudinary set up
+### Activity model
+### Activities page
+### Activity info page
+### Kids model
+### New kid form
+### Kid info page
+### Kid activities page
+### Kids in profile page
+### New activity page 
+### About us page
+### Adaptable deploy
+### Update profile
+### Update activity
+### Update kid
+### Delete activity
+### Delete kid
+### Logout
+### Articles page
+### Article model
+### Middleware (IsAdmin)
+### Increase password requirements
+
+
+## Task (Styles)
+
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+
+
+## Links
+
+### Trello (MVP) - https://trello.com/b/igxmBTgo/mvp-requirements
+### Trello (All) - https://trello.com/b/BdjZBMBq/project-2
+### GitHub - https://github.com/AleGarAlon/Module2-Proyect/tree/main/views
+### Adaptable deploy - https://homeboundexplorers.adaptable.app/
+### Slides - 

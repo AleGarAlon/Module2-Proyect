@@ -2,13 +2,14 @@ const express = require('express');
 const router = express.Router();
 const uploader = require("../config/cloudinary.config.js");
 const Activity =require('../models/Activity.model');
+const { isAdmin } = require('../middlewares/route-guard.middleware')
 
 router.get("/activities", async (req, res, next) => {
     const allActivities =  await Activity.find()
     res.render("activities/activities", {activities : allActivities});
 });
 
-router.get('/create' , (req ,  res) =>{
+router.get('/create',isAdmin , (req ,  res) =>{
     res.render("activities/new-activity")
     
 })
