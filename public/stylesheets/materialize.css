@@ -2802,11 +2802,13 @@ ul.staggered-list li {
   text-decoration: none;
   bottom: 0;
   width: 100%;
+  z-index: 3;
 }
 .page-footer a {
   color: var(--font-on-primary-color-main);
   font-weight: bold;
   text-decoration: none;
+  z-index: 3;
 }
 .page-footer .footer-copyright,
 .page-footer .footer-copyright a {
@@ -2828,6 +2830,7 @@ ul.staggered-list li {
   color: var(--font-on-primary-color-dark-medium);
   background-color: var(--primary-color-dark);
   text-decoration: none;
+  z-index: 3;
 }
 
 table, th, td {
