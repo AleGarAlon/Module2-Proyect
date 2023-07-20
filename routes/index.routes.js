@@ -27,6 +27,14 @@ router.get("/articles", async (req, res, next) => {
  res.render("articles", {articles : articlesInfo});
 });
 
+router.post("/articles", async (req, res, next) => {
+  const articleInfo = req.body
+  console.log(articleInfo)
+  const articlesInfo = await Article.find({ month: articleInfo.month, year : articleInfo.year })
+ console.log(articlesInfo)
+  res.render("articles", {articles : articlesInfo});
+});
+
 router.get('/:userId/update',isLoggedIn, async (req , res) =>{
   try{
       const userId = req.params.userId

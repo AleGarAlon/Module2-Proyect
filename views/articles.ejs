@@ -1,16 +1,83 @@
 <%- include('./partials/head') %>
-<%- include('./partials/navbar-profile')%>     
+<%- include('./partials/navbar-profile') %>
 
-<header id="profile-id" class="profile-body" >
-<h1>Articles</h1>
-</header>
+<div class="page-container-add">
+          
+  <div class="tittle-div z-depth-2">
+    <header id="profile-id" class="tittle-div center">
+      <h2 class="body-main-h2 h-shadow-w">Articles</h2>
+    </header>
+  </div>
 
+  <div class="title-center">
+
+    <div class="kid-add-card-pannel">
+
+      <main class="new-activity">
+
+        <form action="/articles" method="POST">
+   
+            <div class="choose-div">
+                <label for="form-select-1" class="label-bottom"> Month:
+                  <select name="month" id="form-select-1" class="browser-default">
+                    <option value="" disabled selected>Choose your option:</option>
+                    <option value="1">Jan.</option>
+                    <option value="2">Feb.</option>
+                    <option value="3">Mar.</option>
+                    <option value="4">Apr.</option>
+                    <option value="5">May.</option>
+                    <option value="6">Jun.</option>
+                    <option value="7">Jul.</option>
+                    <option value="8">Aug.</option>
+                    <option value="9">Sep.</option>
+                    <option value="10">Oct.</option>
+                    <option value="11">Nov.</option>
+                    <option value="12">Dec.</option>
+                  </select>
+                </label>
+              </div>
+              <div class="choose-div">
+                <label for="form-select-1" class="label-bottom"> Year:
+                  <select name="year" id="form-select-1" class="browser-default">
+                    <option value="" disabled selected>Choose your option:</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                  </select>
+                </label>
+              </div>
+
+                <div class="button-center checkbox-form">
+                  <button class="btn waves-effect waves-light" type="submit">Search
+                    <i class="material-icons right">Send</i>
+                  </button>
+                </div>
+
+        </form>
+
+      </main> 
+
+    </div>
+
+  </div>
+  <div>
 <% articles.forEach(article => { %>
- <img src="<%- article.image %>" alt="">
  <%- article.title %> <br> 
+ <img src="<%- article.image %>" alt="">
  <%- article.information %> <br>
+  <% }) %>
+</div>
+
+</div>
+
+
  
-<% }) %>
+
+  <footer class="page-footer ">
+    <%- include('./partials/footer') %>
+  </footer>
+
+
+
 
 
 
