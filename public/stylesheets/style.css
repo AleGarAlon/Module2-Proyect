@@ -68,6 +68,9 @@ body {
 .home-P {
   text-justify: distribute;
 }
+.home-content{
+  margin-top: 500px;
+}
 nav {
   overflow: visible !important;
 }
@@ -145,6 +148,13 @@ form {
   padding-bottom: 2em;
 }
 
+.form-reset {
+  width: 0;
+  max-width: 0;
+
+  
+}
+
 .footer-p {
   margin: 0;
   padding-bottom: 20px;
@@ -207,7 +217,7 @@ form {
   }
 .profile-responsive-img-V {
   height: 240px;
-
+  
 
 
   }
@@ -289,6 +299,14 @@ textarea {
   margin-top: 30px;
   margin-bottom: 30px;
   justify-content: flex-start;
+}
+.button-center-act-det {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 160px;
+  justify-content:space-evenly;
+
 }
 .button-center-act {
   display: flex;
@@ -385,9 +403,7 @@ input[type="radio"],
   justify-content: space-between;
   align-items: flex-start;
   gap: 16px;
-  
   margin: 0 auto;
-  
 }
 .gallery img {
   width: 100%;
@@ -395,6 +411,12 @@ input[type="radio"],
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
+}
+.img-home {
+  position:absolute;
+  top: 100px; 
+  left: 20px; 
+  z-index: -1;
 }
 .card-kid {
   position: relative;
@@ -528,4 +550,12 @@ input[type="radio"],
   display:flex;
   flex-direction: column;
   align-items: center;
+}
+.activitity-column {
+  color: whitesmoke;
+  height: 100%;
+  border-radius: 0px;
+  background-color: #2a9d8f;
+  margin-bottom: 30px;
+  z-index: 1;
 }
