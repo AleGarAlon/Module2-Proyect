@@ -78,7 +78,7 @@ nav {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 6;
 }
 ul {
   list-style-type: none;
@@ -155,7 +155,6 @@ form {
   width: 0;
   max-width: 0;
 
-  
 }
 
 .footer-p {
@@ -544,17 +543,23 @@ input[type="radio"],
 }
 
 .tittle-div {
+  position:relative;
   margin: 0;
   width: 100vw;
-  height: 180px;
+  height: 140px;
   background-color: #2a9d8f;
+  z-index: 3;
 }
 .title-center {
+  position:relative;
   display:flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
+
 }
 .activitity-column {
+  position:relative;
   color: whitesmoke;
   height: 100%;
   border-radius: 0px;
