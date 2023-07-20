@@ -4124,7 +4124,7 @@ small {
   width: 100%;
 }
 .card .card-image .card-title {
-  color: var(--background-color-card);
+  color: #f5f5f5;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -5213,7 +5213,7 @@ textarea.materialize-textarea {
           box-sizing: border-box; /* https://stackoverflow.com/questions/1377719/padding-within-inputs-breaks-width-100*/
   padding: 0 16px;
   padding-top: 20px;
-  background-color: var(--surface-color);
+  background-color: rgba(0, 0, 0, 0.00);
   border: none;
   border-radius: 4px;
   border-bottom: 1px solid var(--font-color-medium);
@@ -6310,7 +6310,7 @@ input[type=range]::-ms-thumb {
   line-height: 48px;
 }
 .sidenav li:hover {
-  background-color: var(--hover-color);
+  background-color:#5C747E;
 }
 .sidenav li.active {
   background-color: var(--focus-color);
@@ -6324,9 +6324,11 @@ input[type=range]::-ms-thumb {
   padding: 0 32px;
 }
 .sidenav li > a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-flat):not(.btn-large):not(.btn-floating) {
-  color: var(--font-color-main);
+  color: whitesmoke; 
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5);
 }
 .sidenav li > a.btn, .sidenav li > a.btn-small, .sidenav li > a.btn-large, .sidenav li > a.btn-flat, .sidenav li > a.btn-floating {
+  color: #778B94;
   margin: 10px 15px;
 }
 .sidenav li > a > i, .sidenav li > a > [class^=mdi-], .sidenav li > a li > a > [class*=mdi-], .sidenav li > a > i.material-icons {
@@ -7737,7 +7739,7 @@ input[type=text].text-primary {
   }
 }
 :root {
-  --surface-color: #F5F7FC;
+  --surface-color: rgba(0, 0, 0, 0.02);
   --background-color: #ffffff;
   --font-color-main: rgba(0, 0, 0, 0.87);
   --font-color-medium: rgba(0, 0, 0, 0.56);
@@ -7753,7 +7755,7 @@ input[type=text].text-primary {
   --focus-color-solid: #E0E0E0;
   --background-color-disabled: rgba(0, 0, 0, 0.12);
   --background-color-level-4dp: rgba(0, 0, 0, 0.09);
-  --background-color-level-16dp-solid: var(--surface-color);
+  --background-color-level-16dp-solid: #264653;
   --background-color-slight-emphasis: rgba(0, 0, 0, 0.025); /* stripes in table */
   --background-color-card: var(--surface-color);
   --tooltip-background-color: #313033;
@@ -7764,11 +7766,11 @@ input[type=text].text-primary {
   --switch-thumb-off-color: #ffffff;
   --carousel-indicator-color: rgba(255, 255, 255, 0.45);
   --carousel-indicator-active-color: #FFF;
-  --primary-color: #f4a261;        /*primary color */
+  --primary-color: #F4A261;        /*primary color */
   --primary-color-dark: #1D7D74;
   --primary-color-numeric: 38, 166, 154;
-  --primary-color-raised-hover-solid: #e9c46a;
-  --primary-color-raised-focus-solid: #e9c46a;
+  --primary-color-raised-hover-solid: #F7B989;
+  --primary-color-raised-focus-solid: #F7B989;
   --primary-color-font-medium-color: rgba(var(--primary-color-numeric), 0.7);
   --primary-color-font-disabled-color: rgba(var(--primary-color-numeric), 0.4);
   --primary-color-hover-opaque: rgba(var(--primary-color-numeric), 0.06);

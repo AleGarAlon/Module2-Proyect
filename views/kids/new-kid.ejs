@@ -3,76 +3,76 @@
 <%- include('../partials/navbar-profile') %>
 
 <div class="page-container-add">
+          
+  <div class="tittle-div z-depth-2">
+    <header id="profile-id" class="tittle-div center">
+      <h2 class="body-main-h2 h-shadow-w">Add your child</h2>
+    </header>
+  </div>
 
-<div id="body-id" class="container">
+  <div class="title-center">
 
-  <header id="profile-id" class="profile-body center">
-    <h2>Add your child</h2>
-  </header>
+    <div class="kid-add-card-pannel">
 
-  <div class="card-panel">
+      <main class="new-activity">
 
-    <main class="new-activity">
+        <form action="/kids/newKid" method="POST">
 
-      <form action="/kids/newKid" method="POST">
-
-
-        <div class="input-field">
-          <input name="name" placeholder=" " id="name" type="text" class="validate">
-          <label for="name">Name:</label>
-        </div>
-
-       
-        <label for="form-select-2" class="choose-div label-bottom">Age:</label>
-        <div class="choose-div checkbox-form">
-          <p>
-            <label>
-              <input id="checkbox-1" type="checkbox" name="age" value="0-1">
-              <span>0-1</span>
-            </label>
-          </p>
-          <p>
-            <label>
+          <div class="input-field checkbox-form">
+            <input name="name" placeholder=" " id="name" type="text" class="validate">
+            <label for="name">Name:</label>
+          </div>
+              
+          <label for="form-select-2" class="choose-div label-bottom">Age:</label>
+          
+          <div class="choose-div checkbox-form">
+            <p>
+              <label>
+                <input id="checkbox-1" type="checkbox" name="age" value="0-1">
+                <span>0-1</span>
+              </label>
+            </p>
+                  
+            <p>
+              <label>
               <input id="checkbox-1" type="checkbox" name="age" value="1-2">
               <span>1-2</span>
-            </label>
-          </p>
-          <p>
-            <label>
+              </label>
+            </p>
+            
+            <p>
+              <label>
               <input id="checkbox-1" type="checkbox" name="age" value="3-4">
               <span>3-4</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input id="checkbox-1" type="checkbox" name="age" value="5-6">
-              <span>5-6</span>
-            </label>
-          </p>
-        </div>
+              </label>
+            </p>
+            
+            <p>
+              <label>
+                <input id="checkbox-1" type="checkbox" name="age" value="5-6">
+                <span>5-6</span>
+              </label>
+            </p>
 
-
-        <!--<div class="image-field file-field input-field field-bottom">
-          <div class="btn">
-            <span>Photo</span>
-            <input type="file" name="imageUrl" accept="image/png, image/jpg" />
           </div>
-          <div class="file-path-wrapper">
-            <input class="file-path validate" type="text">
-          </div>
-        </div>-->
 
-        <div class="button-center-add-child">
-          <button class=" btn waves-effect waves-light" type="submit">Add!
-            <i class="material-icons right"></i>
-          </button>
-        </div>
+                <div class="button-center checkbox-form">
+                  <button class="btn waves-effect waves-light" type="submit">Add!
+                    <i class="material-icons right">Send</i>
+                  </button>
+                </div>
 
-      </form>
-    </main>
+        </form>
+
+      </main> 
+
+    </div>
+
   </div>
+
 </div>
-</div>
+
+
   <footer class="page-footer ">
     <%- include('../partials/footer') %>
   </footer>

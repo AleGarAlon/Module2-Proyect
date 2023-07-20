@@ -2,13 +2,13 @@
 <%- include('../partials/navbar-profile') %>
 
 
-<div class="body-main-act page-container">
+<div class="body-main-act container">
 
   <div class="content-wrap">
 
     <div class="row content-wrap">
 
-      <div class=" hoverable profile-column col s10 m10 offset-l1 l10 blue darken-1">
+      <div class=" hoverable activity-column col s11 m11 offset-l1 l11 blue darken-1">
 
         <div class=" col s12 m10 l10">
           <h3 Class="h3-overlay activity-detail-header capitalize"><%- activity.name %></h3>
@@ -46,14 +46,14 @@
         </ol>
         
         
-        <div class="button-center-act button-form-kids center">
+        <div class="button-center-act-det">
 
-          <button class="btn z-depth-1 waves-effect waves-light">
+          <button class="btn waves-effect waves-light">
               <a class="h-shadow-w" href="/activities/<%- activity._id%>/update">Update activity</a>
           </button>
         
-          <form class=" button-form-kids" action="/activities/<%- activity._id %>/delete" method="POST">
-            <button class=" btn z-depth-1 waves-effect waves-light" type="submit">Delete activity</button>
+          <form class="form-reset button-form-kids-act " action="/activities/<%- activity._id %>/delete" method="POST">
+            <button class="btn waves-effect waves-light" type="submit">Delete activity</button>
           </form>
 
         </div>

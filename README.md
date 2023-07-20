@@ -63,9 +63,11 @@
 
 # Additional design features
 
-### A new list of activities already completed by the kids
+### A new list of activities already completed by the kids.
 
-### The articles section
+### A form to search for older articles in the article page.
+
+### A way for user to send posible new activities to the admins
 
 ### A way for user to send ideas for new activities
 
@@ -125,7 +127,6 @@
 
 ### form
 
-
 # kid-info.ejs
 
 ### information about the kid
@@ -142,9 +143,86 @@
 
 # about-us
 
-### in develop
+### Information about the proyect
 
 # Articles
 
-### in develop
+### Random articles
 
+# layout
+
+### navbar for all pages
+### footer for all pages
+### script links
+
+# Stylesheets
+
+### materialize.css
+### materialize.min.css
+### Style
+
+## Task (back)
+
+### Create Repo
+### Add colaborator to repo
+### Create branches
+### Routes
+### Auth
+### Sign up page
+### Log in page
+### User model
+### Profile page
+### Middlewares (IsLoggIn and IsLoggedOut)
+### Cloudinary set up
+### Activity model
+### Activities page
+### Activity info page
+### Kids model
+### New kid form
+### Kid info page
+### Kid activities page
+### Kids in profile page
+### New activity page 
+### About us page
+### Adaptable deploy
+### Update profile
+### Update activity
+### Update kid
+### Delete activity
+### Delete kid
+### Logout
+### Articles page
+### Article model
+### Middleware (IsAdmin)
+### Increase password requirements
+### Favicon 
+
+
+## Task (Styles)
+
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+### 
+
+
+## Links
+
+### Trello (MVP) - https://trello.com/b/igxmBTgo/mvp-requirements
+### Trello (All) - https://trello.com/b/BdjZBMBq/project-2
+### GitHub - https://github.com/AleGarAlon/Module2-Proyect/tree/main/views
+### Adaptable deploy - https://homeboundexplorers.adaptable.app/
+### Slides - 

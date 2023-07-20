@@ -1,34 +1,37 @@
 <%- include('./partials/head') %>
 <%- include('./partials/navbar-profile') %>
 
-<div id="body-id" class="container">
+<div class="page-container-add">
 
-  <header id="profile-id" class="profile-body center">
-    <h2>Update your profile</h2>
-  </header>
-
-  <div class="card-panel form-card z-depth-3 small-screen">
-
-    <form action="/<%- user._id%>/update" method="POST">
-
-      <div class="input-field checkbox-form">
-        <input id="name" type="text" name="name" placeholder=" " class="validate" required>
-        <label for="name">Name</label>
-      </div>
-
-      <div class="input-field checkbox-form">
-        <input id="password" type="password" name="password" placeholder=" " class="validate" required>
-        <label for="name">Password</label>
-      </div>
-      
-      <div class="button-center checkbox-form">
-        <button class="btn waves-effect waves-light" type="submit">Update
-          <i class="material-icons right">send</i>
-        </button>
-
-    </form>
-
+  <div class="tittle-div z-depth-2">
+    <header id="profile-id" class="tittle-div center">
+      <h2 class="body-main-h2 h-shadow-w">Update your profile</h2>
+    </header>
   </div>
+  <div class="title-center">
+    <div class="kid-add-card-pannel">
+      <main class="new-activity">
+        <form action="/<%- user._id%>/update" method="POST">
+          
+          <div class="input-field checkbox-form">
+            <input id="name" type="text" name="name" placeholder=" " class="validate" required>
+            <label for="name">Name</label>
+          </div>
+          <div class="input-field checkbox-form">
+            <input id="password" type="password" name="password" placeholder=" " class="validate" required>
+            <label for="name">Password</label>
+          </div>
+          
+          <div class="button-center checkbox-form">
+            <button class="btn waves-effect waves-light" type="submit">Update
+              <i class="material-icons right">send</i>
+            </button>
+        </form>
+      </main> 
+    </div>
+    
+  </div>
+  
 </div>
 
 <footer class="page-footer">
