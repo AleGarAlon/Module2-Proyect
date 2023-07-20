@@ -9,22 +9,22 @@
                 <h4 class="center  h-shadow-w"><%= user.name %>'s Profile</h4>
             </header>
 
-            <div class="profile-button-center-sidebar ">
+            <div class="button-form-kids">
                
                 <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
-                    <a class="h-shadow-w add-kid " href="/kids/newKid">Add a kid</a>
+                    <a class="profile-btn-a h-shadow-w add-kid" href="/kids/newKid">Add a kid</a>
                     <i class="material-icons right">person_add</i>
                 </button>
 
                 <button class="btn z-depth-1 waves-effect waves-light profile-button-p">
-                    <a class="h-shadow-w " href="/<%- user._id %>/update">Update profile</a>
+                    <a class=" profile-btn-a h-shadow-w " href="/<%- user._id %>/update">Update profile</a>
                     <i class="material-icons right">update</i>
                 </button>
                 <!--<form action="/<%- user._id %>/delete" method="POST">
                 <button type="submit">Delete profile</button>
                 </form>-->
                 <button class="btn z-depth-1 waves-effect waves-light profile-button-p">
-                    <a class="h-shadow-w " href="/logout">Logout</a>
+                    <a class=" profile-btn-a h-shadow-w " href="/logout">Logout</a>
                     <i class="material-icons right">logout</i>
                 </button>
             
@@ -32,20 +32,22 @@
                 
         </div>
 
-        <div class="col s12 m7 l9 profile-stack">
+        <div class="col s9 m9 l9 ">
                     
-            <div class="profile-card-stacked card-stacked ">
+            <div class="profile-card-stacked">
                 <% kids.forEach(kid => { %>
                         
                 <div class="card horizontal profile-stack-child hoverable">
-                    <img class="profile-responsive-img-h" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
+                    <a href="/kids/<%- kid._id %>" >
+                        <img class="profile-responsive-img-h" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
+                    </a>
                                 
                     <div class="center-align profile-info-child"> 
                         <H4 class="h-shadow-b"><%- kid.name %>'s profile</H4>                          
                                                                                 
                         <div class="profile-button-center">
                             <button class="btn z-depth-1 waves-effect waves-light" type="submit">
-                                <a class=" h-shadow-w add-kid" href="/kids/<%- kid._id %>">Details</a>
+                                <a class="profile-btn-a h-shadow-w add-kid" href="/kids/<%- kid._id %>">Details</a>
                             </button>  
                         </div>
 
@@ -68,4 +70,4 @@
 </footer>
 
 <%- include('./partials/scripts') %>
-
++

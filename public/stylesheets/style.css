@@ -48,6 +48,13 @@ body {
   margin-top: 60px;
   padding: 0 28px;
 }
+.body-main-h2{
+  padding-top: 45px;
+}
+.body-main-h4 {
+  padding-top: 75px;
+  margin-left: 200px;
+}
 #page-container {
   min-height: 100vh;
 }
@@ -176,7 +183,6 @@ form {
   width: 800px;
   z-index: 0;
 }
-
 .profile-info-child {
   margin-top: 50px;
   width: 100%;
@@ -199,17 +205,24 @@ form {
 .profile-responsive-img-h {
   height: 240px;
   }
-  
+.profile-responsive-img-V {
+  height: 240px;
+
+
+
+  }
 @media (max-width: 990px) {
   .profile-responsive-img-h {
     height: 240px;
     }
-    
 }  
 .profile-card-stacked{ 
-  margin: 74px 0 0 0;
+  margin: 64px 0 0 0;
   
-
+}
+.profile-btn-a {
+  font-size: 20px;
+  color: white;
 }
 .checkbox-form {
   padding-left: 4%;
@@ -229,11 +242,16 @@ input,
 textarea {
   background-color: #f3f6fc;
   border: 1px solid #0a0a23;
-  color: #ffffff;
+  color:white;
 }
 
 .image-field {
   margin-top: 5px;
+}
+
+.image-field-kid {
+  margin-top: 5px;
+  margin-left: 10px;
 }
 
 .field-bottom {
@@ -253,11 +271,9 @@ textarea {
   margin-top: 20px;
 }
 .pofile-stack {
-  
   display: flex;
   flex-direction: column;
-  
-  top: 200px;
+   top: 200px;
   right: 40px;
   margin: 10px;
   padding-right: 200px;
@@ -289,7 +305,10 @@ textarea {
 .button-form-kids {
   margin: 0;
   padding-left: 90px;
-  
+}
+.button-form-kids-act {
+  margin: 0;
+  padding-left: 0;
 }
 
 fieldset {
@@ -383,8 +402,13 @@ input[type="radio"],
   font-size: 24px;
   font-weight: 300;
   cursor: pointer;
-  
-
+}
+.card-kid-v {
+  position: relative;
+  border-radius: 0px;
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 67px;
 }
 .card-content-kid {
   color: black; 
@@ -400,9 +424,7 @@ input[type="radio"],
 .act-card-kid {
   max-width: 700px;
   padding: 20px;
-  
 }
-
 
 .responsive-img2 {
   width: 100%;
@@ -412,17 +434,14 @@ input[type="radio"],
 .responsive-img3 {
   width: 100%;
   object-fit: cover;
-  
 }
 
 .page-container {
- 
-  min-height: 100%;
+   min-height: 100%;
   margin-bottom: 100px;
 }
 
 .page-container-add{
-  
   height: 100%;
 }
 .capitalize {
@@ -432,6 +451,11 @@ input[type="radio"],
   font-weight: 500;
   margin-left: 35px;
 }
+.h5-side {
+  font-weight: 500;
+  margin-left: 20px;
+}
+
 
 .click-for-more {
   color: #1976d2;
@@ -457,18 +481,17 @@ input[type="radio"],
 
 .h3-overlay {
   position: absolute;
-  color: whitesmoke; 
+  color: white; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .h-shadow-w {
-  color: whitesmoke; 
+  color: white; 
   text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5);
 }
 .h-shadow-b {
   color: black; 
   text-shadow: 0.5px 0.5px 1px whitesmoke;
 }
-
 
 .kid-activity-card {
   display:flex;
@@ -480,4 +503,29 @@ input[type="radio"],
 }
 .logo-size {
   max-width: 35px;
+}
+.kid-add-card-pannel  {
+  max-width: 650px;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  transition: -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+  padding: 0;
+  margin: 0;
+  border-radius: 0px;
+  background-color: var(--background-color-card);
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tittle-div {
+  margin: 0;
+  width: 100vw;
+  height: 180px;
+  background-color: #2a9d8f;
+}
+.title-center {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
