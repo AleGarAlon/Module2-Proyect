@@ -4,6 +4,8 @@
 
 ## Description
 
+### Homebound Explorers is a convenient and user-friendly mobile app specifically designed to assist busy parents and caregivers in providing engaging and age-appropriate activities for their children, right at their fingertips. The app offers a diverse range of creative and educational activities suitable for indoor and outdoor settings, making it a reliable companion for parents looking to inspire their children's learning and play experiences while managing their busy schedules.
+
 ## (2 Models, 1 Relationship, CRUD, Auth)
 
 # Home
