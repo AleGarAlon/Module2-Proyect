@@ -3,69 +3,66 @@
 
 <div id="page-container" class="row">
 
-    <div class="profile-column col s12 m3 l3 z-depth-5">
-    
-        <header id="profile-id" class="profile-body">
-          <h4 class="h-shadow-w"><%- kid.name %>'s information</h4>
-        </header>
-        
-        <h5 class="h5-side h-shadow-w ">Name: <%- kid.name %></h5>
-        <h5 class="h5-side h-shadow-w ">Age Range: <%- kid.age %></h5>
+  <div class="profile-column col s12 m3 l3 z-depth-5">
 
-        <div class=" button-form-kids ">
+    <header id="profile-id" class="profile-body">
+      <h4 class="h-shadow-w"><%- kid.name %>'s information</h4>
+    </header>
 
-            <div>
-                <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
-                    <a class="profile-btn-a h-shadow-w add-kid" href="/kids/<%- kid._id %>/update">Update kid</a>
-                    <i class="material-icons right">person_add</i>
-                </button>
-            
-                <form action="/kids/<%- kid._id %>/delete" method="POST">
-                    <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
-                        <a class="profile-btn-a h-shadow-w add-kid">Delete kid</a>
-                        <i class="material-icons right">person_remove</i>
-                    </button>
-                </form>
-            </div>
+    <h5 class="h5-side h-shadow-w ">Name: <%- kid.name %></h5>
+    <h5 class="h5-side h-shadow-w ">Age Range: <%- kid.age %></h5>
+
+    <div class="button-form-kids">
+
+      <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
+        <a class="profile-btn-a h-shadow-w add-kid" href="/kids/<%- kid._id %>/update">Update kid</a>
+        <i class="material-icons right">person_add</i>
+      </button>
+
+      <form action="/kids/<%- kid._id %>/delete" method="POST">
+        <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
+          <a class="profile-btn-a h-shadow-w add-kid">Delete kid</a>
+          <i class="material-icons right">person_remove</i>
+        </button>
+      </form>
+
+    </div>
+
+  </div>
+
+  <div class="col s9 m9 l9 ">
+
+    <div class="profile-card-stacked">
+      <% kid.activities.forEach(activity => { %>
+
+      <div class="card horizontal profile-stack-child hoverable">
+        <a href="/activities/<%- activity._id %>" class="click-for-more">
+          <img class="profile-responsive-img-V z-depth-1 h-shadow-b" src="<%-activity.image%>" alt="<%- activity.name %>">
+        </a>
+
+        <div class="center-align profile-info-child">
+          <h4 class="capitalize activator image-field-kid h-shadow-b"><%- activity.name %></h4>
+
+          <div class="profile-button-center">
+            <button class="btn z-depth-1 waves-effect waves-light" type="submit">
+              <a class="profile-btn-a h-shadow-w add-kid" href="/activities/<%- activity._id %>" class="click-for-more">Details</a>
+            </button>
+          </div>
 
         </div>
-    
+
+      </div>
+
+      <% }) %>
+
     </div>
 
-    
-    <div class="col s9 m9 l9 ">
+  </div>
 
+</div>
 
-    <div class="card-kid-v">
-        
-        <% kid.activities.forEach(activity => { %>
+<footer class="page-footer">
+    <%- include('../partials/footer') %>
+</footer>
 
-            <div class=" hoverable">
-                    
-                <h4 class="capitalize activator image-field-kid h-shadow-b"><%- activity.name %></h4n>              
-                
-                <div class=" ">
-                    
-                    <div>
-                        <img class="profile-responsive-img-V z-depth-1 h-shadow-b" src="<%-activity.image%>" alt="<%- activity.name %>">
-                    </div>
-                    
-                    <div class="card-content-kid">
-                            
-                       <h6>
-                            <a class="click-for-more"  href="/activities/<%- activity._id %>">Click here for more details</a>
-                        </h6>
-                                           
-                    </div>
-
-                </div>
-            
-            </div>
-
-        <% }) %>
-    </div>
-   
-       
-</div>  
-
-<%- include('../partials/scripts') %>
+  <%- include('../partials/scripts') %>

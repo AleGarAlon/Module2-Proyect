@@ -1,19 +1,22 @@
 <%- include('../partials/head') %>
 <%- include('../partials/navbar-profile') %>
 
+<div class="page-container">
 
-<div class="body-main-act container">
+  <div class="tittle-div z-depth-2">
+    <header id="profile-id" class="tittle-div center">
+      <h2 class="body-main-h2 h-shadow-w capitalize "><%- activity.name %></h2>
+    </header>
+  </div>
 
-  <div class="content-wrap">
+  <div class="title-center">
 
     <div class="row content-wrap">
 
-      <div class=" hoverable activity-column col s11 m11 offset-l1 l11 blue darken-1">
+      <div class="act-details-color-main hoverable activity-column col s12 m12 offset-l1 l10">
 
         <div class=" col s12 m10 l10">
-          <h3 Class="h3-overlay activity-detail-header capitalize"><%- activity.name %></h3>
           <img class="photo responsive-img2 " src="<%- activity.image %>" alt="">
-
         </div>
 
         <h5 class="h-shadow-w h5-p">Description:</h5>
@@ -57,7 +60,9 @@
           </form>
 
         </div>
+        
       </div>
+
     </div>
 
   </div>
@@ -67,3 +72,5 @@
 <footer class="page-footer">
   <%- include('../partials/footer') %>
 </footer>
+
+<%- include('../partials/scripts') %>
