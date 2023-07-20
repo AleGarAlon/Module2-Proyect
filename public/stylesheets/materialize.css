@@ -5213,7 +5213,7 @@ textarea.materialize-textarea {
           box-sizing: border-box; /* https://stackoverflow.com/questions/1377719/padding-within-inputs-breaks-width-100*/
   padding: 0 16px;
   padding-top: 20px;
-  background-color: var(--surface-color);
+  background-color: rgba(0, 0, 0, 0.00);
   border: none;
   border-radius: 4px;
   border-bottom: 1px solid var(--font-color-medium);
