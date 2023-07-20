@@ -3,78 +3,75 @@
 
 <div id="page-container" class="row">
 
-        <div class="profile-column col s12 m3 l3 z-depth-2">
-                
-            <header id="profile-id" class="profile-body">
-                <h4 class="center  h-shadow-w"><%= user.name %>'s Profile</h4>
-            </header>
+  <div class="profile-column col s12 m3 l3 z-depth-2">
 
-            <div class="button-form-kids">
-               
-                <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
-                    <a class="profile-btn-a h-shadow-w add-kid" href="/kids/newKid">Add your child</a>
-                    <i class="material-icons right">person_add</i>
-                </button>
+    <header id="profile-id" class="profile-body">
+      <h4 class="center  h-shadow-w"><%= user.name %>'s Profile</h4>
+    </header>
 
-                 <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
-                    <a class=" profile-btn-a h-shadow-w" href="/activities/createBeta">Create activities</a>
-                    <i class="material-icons right">addchart</i>
-                </button>
+    <div class="button-form-kids">
 
-                 <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
-                    <a class=" profile-btn-a h-shadow-w" href="/<%- user._id %>/update">Update profile</a>
-                    <i class="material-icons right">update</i>
-                </button>
-                
-                <!--<form action="/<%- user._id %>/delete" method="POST">
+      <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
+        <a class="profile-btn-a h-shadow-w add-kid" href="/kids/newKid">Add your child</a>
+        <i class="material-icons right">person_add</i>
+      </button>
+
+      <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
+        <a class=" profile-btn-a h-shadow-w" href="/activities/createBeta">Create activities</a>
+        <i class="material-icons right">addchart</i>
+      </button>
+
+      <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
+        <a class=" profile-btn-a h-shadow-w" href="/<%- user._id %>/update">Update profile</a>
+        <i class="material-icons right">update</i>
+      </button>
+
+      <!--<form action="/<%- user._id %>/delete" method="POST">
                 <button type="submit">Delete profile</button>
                 </form>-->
-                
-                <button class="btn z-depth-1 waves-effect waves-light profile-button-p">
-                    <a class=" profile-btn-a h-shadow-w" href="/logout">Logout</a>
-                    <i class="material-icons right">logout</i>
-                </button>
-            
-            </div>
-                
-        </div>
 
-        <div class="col s9 m9 l9 ">
-                    
-            <div class="profile-card-stacked">
-                <% kids.forEach(kid => { %>
-                        
-                <div class="card horizontal profile-stack-child hoverable">
-                    <a href="/kids/<%- kid._id %>" >
-                        <img class="profile-responsive-img-h" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
-                    </a>
-                                
-                    <div class="center-align profile-info-child"> 
-                        <H4 class="h-shadow-b"><%- kid.name %>'s profile</H4>                          
-                                                                                
-                        <div class="profile-button-center">
-                            <button class="btn z-depth-1 waves-effect waves-light" type="submit">
-                                <a class="profile-btn-a h-shadow-w add-kid" href="/kids/<%- kid._id %>">Details</a>
-                            </button>  
-                        </div>
+      <button class="btn z-depth-1 waves-effect waves-light profile-button-p">
+        <a class=" profile-btn-a h-shadow-w" href="/logout">Logout</a>
+        <i class="material-icons right">logout</i>
+      </button>
 
-                    </div>   
+    </div>
 
-                </div>
+  </div>
 
-                <% }) %>
-                <!--   <button><a href="/kids/%- kid._id %>">Details</a></button> -->
-                <!--   <button><a href="/kids/newKid">Add a kid</a></button>  -->
-                                            
-            </div>
+  <div class="col s9 m9 l9 ">
+
+    <div class="profile-card-stacked">
+      <% kids.forEach(kid => { %>
+
+      <div class="card horizontal profile-stack-child hoverable">
+        <a href="/kids/<%- kid._id %>" class="click-for-more">
+          <img class="profile-responsive-img-h" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
+        </a>
+
+        <div class="center-align profile-info-child">
+          <h4 class="capitalize activator image-field-kid h-shadow-b">'s profile</h4>
+
+          <div class="profile-button-center">
+            <button class="btn z-depth-1 waves-effect waves-light" type="submit">
+              <a class="profile-btn-a h-shadow-w add-kid" href="/kids/<%- kid._id %>">Details</a>
+            </button>
+          </div>
 
         </div>
+
+      </div>
+
+      <% }) %>
+
+    </div>
+
+  </div>
 
 </div>
 
 <footer class="page-footer">
-    <%- include('./partials/footer') %>
+  <%- include('./partials/footer') %>
 </footer>
 
 <%- include('./partials/scripts') %>
-

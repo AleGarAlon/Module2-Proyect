@@ -568,3 +568,6 @@ input[type="radio"],
   margin-bottom: 30px;
   z-index: 1;
 }
+.act-details-color-main {
+  background-color: #2a9d8f;
+}
