@@ -221,4 +221,4 @@
 ### Trello (All) - https://trello.com/b/BdjZBMBq/project-2
 ### GitHub - https://github.com/AleGarAlon/Module2-Proyect/tree/main/views
 ### Adaptable deploy - https://homeboundexplorers.adaptable.app/
-### Slides - 
+### Slides - https://docs.google.com/presentation/d/10GkGVTrF3FQPLP6frqXhGu9K7-exCiO008SPUO79b2I/edit?usp=sharing
