@@ -14,11 +14,11 @@ const articleSchema = new Schema(
         required: true, 
       },
       month: {
-        type: Number,
+        type: String,
         required: true
       },
       year: {
-        type: Number,
+        type: String,
         required: true
       },
       reference: {

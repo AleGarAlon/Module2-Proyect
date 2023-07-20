@@ -200,23 +200,17 @@
 
 ## Task (Styles)
 
-### 
-### 
-### 
-### 
-### 
-### 
-### 
-### 
-### 
-### 
-### 
-### 
-### 
-### 
-### 
-### 
-### 
+### Implement the materialize
+### Navbar
+### Footer
+### Profile page
+### Home page
+### Activities page
+### Kid page
+### Forms styling
+### About us
+### Implementation of the logo
+### Articles page
 
 
 ## Links
