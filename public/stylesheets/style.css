@@ -184,7 +184,7 @@ form {
 .profile-column {
   color: whitesmoke;
   height: 100%;
-  width: 350px;
+  width: 280px;
   border-radius: 0px;
   background-color: #2a9d8f;
   margin-bottom: 30px;
@@ -324,7 +324,7 @@ textarea {
 
 .button-form-kids {
   margin: 0;
-  padding-left: 90px;
+  padding-left: 21px;
 }
 .button-form-kids-act {
   margin: 0;
@@ -467,6 +467,7 @@ input[type="radio"],
 
 .page-container-add{
   height: 100%;
+  max-width: 100% !important;
 }
 .capitalize {
   text-transform: capitalize;
@@ -545,7 +546,7 @@ input[type="radio"],
 .tittle-div {
   position:relative;
   margin: 0;
-  width: 100vw;
+  max-width: 100vw;
   height: 140px;
   background-color: #2a9d8f;
   z-index: 3;
