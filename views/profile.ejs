@@ -16,13 +16,20 @@
                     <i class="material-icons right">person_add</i>
                 </button>
 
-                <button class="btn z-depth-1 waves-effect waves-light profile-button-p">
+                 <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
+                    <a class=" profile-btn-a h-shadow-w " href="/activities/createBeta">Send us your activities</a>
+                    <i class="material-icons right">update</i>
+                </button>
+
+                 <button class="btn z-depth-1 waves-effect waves-light profile-button-p" type="submit">
                     <a class=" profile-btn-a h-shadow-w " href="/<%- user._id %>/update">Update profile</a>
                     <i class="material-icons right">update</i>
                 </button>
+                
                 <!--<form action="/<%- user._id %>/delete" method="POST">
                 <button type="submit">Delete profile</button>
                 </form>-->
+                
                 <button class="btn z-depth-1 waves-effect waves-light profile-button-p">
                     <a class=" profile-btn-a h-shadow-w " href="/logout">Logout</a>
                     <i class="material-icons right">logout</i>
@@ -70,4 +77,4 @@
 </footer>
 
 <%- include('./partials/scripts') %>
-+
+
