@@ -40,6 +40,9 @@ body {
   padding: 0;
  
 }
+.body-main-home {
+  padding: 0 28px;
+}
 .body-main {
   margin-top: 100px;
   padding: 0 28px;
@@ -68,6 +71,9 @@ body {
 .home-P {
   text-justify: distribute;
 }
+.home-content-home{
+  margin-top: 2px;
+}
 .home-content{
   margin-top: 500px;
 }
@@ -92,8 +98,8 @@ ul {
 
 .footer-copyright2 {
   font-size: small;
-  background-color: #e76f51;
-  color: whitesmoke;
+  background-color: #264653;
+  color: white;
   padding: 2px 0 2px 35px;
 }
 
@@ -139,6 +145,17 @@ ul {
     font-size: 25px;
   }
 }
+.homebound-img-nav {
+  max-width: 34px;
+  margin: 15px 5px 5px 64px;
+}
+@media (max-width: 992px) {
+  .homebound-img-nav {
+    max-width: 34px;
+    margin: 15px 5px 5px 5px;
+  }
+}
+
 .homebound-img {
   max-width: 35px;
 }
@@ -362,12 +379,22 @@ input[type="radio"],
   height: 100px;
 }
 
+.form-card-longForm {
+  display: flex !important;
+  justify-content: center !important;
+  margin-left: 28% !important;
+  margin-right: 28% !important;
+  max-width: 700px !important;
+  padding: 0 35px 0 30px !important;
+}
+
 .form-card {
   display: flex !important;
   justify-content: center !important;
   margin-left: 28% !important;
   margin-right: 28% !important;
   max-width: 700px !important;
+  padding: 0 20px 0 0 !important;
 }
 @media (max-width: 800px) {
   .form-card {
@@ -446,8 +473,20 @@ input[type="radio"],
   padding: 20px;
 }
 .act-card-kid {
+  padding: 10px;
   max-width: 700px;
   padding: 20px;
+}
+.carousel-sizing {
+  margin-top: 35px;
+  width: 100%;
+}
+.responsive-carousel-logo {
+  max-width: 700px;
+}
+.responsive-carousel {
+  max-height: 700px;
+  object-fit: cover;
 }
 
 .responsive-img2 {
