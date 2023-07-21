@@ -1,224 +1,224 @@
 # Proyect2_Homebound_Explorers
 
-### https://homeboundexplorers.adaptable.app
+#### https://homeboundexplorers.adaptable.app
 
 ## Description
 
-### Homebound Explorers is a convenient and user-friendly mobile app specifically designed to assist busy parents and caregivers in providing engaging and age-appropriate activities for their children, right at their fingertips. The app offers a diverse range of creative and educational activities suitable for indoor and outdoor settings, making it a reliable companion for parents looking to inspire their children's learning and play experiences while managing their busy schedules.
+ Homebound Explorers is a convenient and user-friendly mobile app specifically designed to assist busy parents and caregivers in providing engaging and age-appropriate activities for their children, right at their fingertips. The app offers a diverse range of creative and educational activities suitable for indoor and outdoor settings, making it a reliable companion for parents looking to inspire their children's learning and play experiences while managing their busy schedules.
 
-## (2 Models, 1 Relationship, CRUD, Auth)
+### (2 Models, 1 Relationship, CRUD, Auth)
 
-# Home
+## Home
 
-### Little information about the proyect
-### A nav bar and a footer with links to diferent pages in the app
+Contains information intrdocutory information about the proyect.
+A nav bar and a footer with links as means of navegation to diferent pages in the app.
 
-# Sign up
+## Sign up
 
-### A form with Username, email and password
+ A "POST" method form with Username, email and password autentication fields. Password includes a minimum set of requirements in order for the password to be accepted.
 
-# Log in
+## Log in
 
-### A form Email and password
+A "POST" method form with authenticating logic in order to create an active user section, enabling access to features in the website.
 
-# Activities
+## Activities
 
-### A list of all the aviable activities in the page, a descriptive photo and text about each activity, follow by a link to the activity details
+A list of all the aviable activities in the page, a descriptive photo and text about each activity, follow by a link to the activity details. All photos are stored in cloudinary  and the database is handled via MongoDB
 
-# Activity details
+## Activity details
 
-### All the aviable information about the activity: Name, duration, age, materials needed, skills and steps.
+All the aviable information about the activity: Name, duration, age, materials needed, skills and steps. All the information stored in MongoDB.
 
-# Activity update
+## Activity update
 
-### A form to update the information of the activity
+A form to update the information of the activity.
 
-# New activity
+## New activity
 
-### A form to create a new activity. You can fill : Name, Age, Duration, Materials, skills, Steps and Image
+A form to create a new activity. You can fill : Name, Age, Duration, Materials, skills, Steps and Image.
 
-# Profile
+## Profile
 
-### Basic information about the user and the information and link to the user's kids
+Basic information about the user and the information and link to the user's kids.
 
-# Kid info
+## Kid info
 
-### all the information aboit the kid and all the activities the kid has access to (determined by age)
+All the information aboit the kid and all the activities the kid has access to (determined by age).
 
-# Kid update  
+## Kid update  
 
-### A form to update the kid information
+A form to update the kid information.
 
-# New Kid
+## New Kid
 
-### A form to create a new kid bound to the user. You can fill Name and Age
+A form to create a new kid bound to the user. You can fill Name and Age.
 
-# About us
+## About us
 
-### Information about the creators and the proyect
+Section with information regarding the page creators, business model and contact information (to be updated).
 
-# Articles
+## Articles
 
-### Informative articles about Education, Home schooling, kids develop...
+Informative articles about Education, Home schooling, kids develop.
 
 ## Backlog
 
-# Additional design features
+### Additional design features
 
-### A new list of activities already completed by the kids.
+A new list of activities already completed by the kids.
 
-### A form to search for older articles in the article page.
+A form to search for older articles in the article page.
 
-### A way for user to send posible new activities to the admins
+A way for user to send posible new activities to the admins
 
-### A way for user to send ideas for new activities
+A way for user to send ideas for new activities
 
 ## Easter Egg (Harry Potter)
 
-### 3 new activities related to the HP universe
+3 new activities related to the HP universe
 
 ## Data Structure
 
-# index.ejs
+### index.ejs
 
-### nav bar
-### information about the proyect
-### footer
+nav bar
+information about the proyect
+footer
 
 
-# signup.ejs
+### Signup.ejs
 
-### form
-### navbar
-### footer
+form
+navbar
+footer
 
-# login.ejs
+### login.ejs
 
-### form
-### navbar
-### footer
+Form
+Navbar
+Footer
 
-# activities.ejs
+### Activities.ejs
 
-### all the activities sorted
-### link to the activities details
+All the activities sorted
+Link to the activities details
 
-# activity-details.ejs
+### Activity-details.ejs
 
-### information about the activity
-### update button
-### delete button
+Information about the activity
+Update button
+Delete button
 
-# activity-update.ejs
+### activity-update.ejs
 
-### form
+Form
 
-# new-activity.ejs
+New-activity.ejs
 
-### form
+Form
 
-# profile.ejs
+### profile.ejs
 
-### information about user
-### update button
-### log out button
-### link to the user's kids
-### new kid button
+information about user
+update button
+log out button
+link to the user's kids
+new kid button
 
-# profile-update.ejs
+### profile-update.ejs
 
-### form
+form
 
-# kid-info.ejs
+### kid-info.ejs
 
-### information about the kid
-### update button
-### delete button
+information about the kid
+update button
+delete button
 
-# kid-update.ejs
+### kid-update.ejs
 
-### form
+form
 
-# new-kid.ejs
+### new-kid.ejs
 
-### form
+form
 
-# about-us
+### about-us
 
-### Information about the proyect
+## Information about the proyect
 
-# Articles
+## Articles
 
 ### Random articles
 
-# layout
+## layout
 
-### navbar for all pages
-### footer for all pages
-### script links
+navbar for all pages
+footer for all pages
+script links
 
-# Stylesheets
+## Stylesheets
 
-### materialize.css
-### materialize.min.css
-### Style
+materialize.css
+materialize.min.css
+Style
 
 ## Task (back)
 
-### Create Repo
-### Add colaborator to repo
-### Create branches
-### Routes
-### Auth
-### Sign up page
-### Log in page
-### User model
-### Profile page
-### Middlewares (IsLoggIn and IsLoggedOut)
-### Cloudinary set up
-### Activity model
-### Activities page
-### Activity info page
-### Kids model
-### New kid form
-### Kid info page
-### Kid activities page
-### Kids in profile page
-### New activity page 
-### About us page
-### Adaptable deploy
-### Update profile
-### Update activity
-### Update kid
-### Delete activity
-### Delete kid
-### Logout
-### Articles page
-### Article model
-### Middleware (IsAdmin)
-### Increase password requirements
-### Favicon 
+Create Repo
+Add colaborator to repo
+Create branches
+Routes
+Auth
+Sign up page
+Log in page
+User model
+Profile page
+Middlewares (IsLoggIn and IsLoggedOut)
+Cloudinary set up
+Activity model
+Activities page
+Activity info page
+Kids model
+New kid form
+Kid info page
+Kid activities page
+Kids in profile page
+New activity page 
+About us page
+Adaptable deploy
+Update profile
+Update activity
+Update kid
+Delete activity
+Delete kid
+Logout
+Articles page
+Article model
+Middleware (IsAdmin)
+Increase password requirements
+Favicon 
 
 
 ## Task (Styles)
 
-### Implement the materialize
-### Navbar
-### Footer
-### Profile page
-### Home page
-### Activities page
-### Kid page
-### Forms styling
-### About us
-### Implementation of the logo
-### Articles page
+Implement the materialize
+Navbar
+Footer
+Profile page
+Home page
+Activities page
+Kid page
+Forms styling
+About us
+Implementation of the logo
+Articles page
 
 
 ## Links
 
-### Trello (MVP) - https://trello.com/b/igxmBTgo/mvp-requirements
-### Trello (All) - https://trello.com/b/BdjZBMBq/project-2
-### GitHub - https://github.com/AleGarAlon/Module2-Proyect/tree/main/views
-### Adaptable deploy - https://homeboundexplorers.adaptable.app/
-### Slides - https://docs.google.com/presentation/d/10GkGVTrF3FQPLP6frqXhGu9K7-exCiO008SPUO79b2I/edit?usp=sharing
+#### Trello (MVP) - https://trello.com/b/igxmBTgo/mvp-requirements
+#### Trello (All) - https://trello.com/b/BdjZBMBq/project-2
+#### GitHub - https://github.com/AleGarAlon/Module2-Proyect/tree/main/views
+#### Adaptable deploy - https://homeboundexplorers.adaptable.app/
+#### Slides - https://docs.google.com/presentation/d/10GkGVTrF3FQPLP6frqXhGu9K7-exCiO008SPUO79b2I/edit?usp=sharing
