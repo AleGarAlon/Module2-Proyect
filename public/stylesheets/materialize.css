@@ -7106,9 +7106,9 @@ input[type=range]::-ms-thumb {
   display: inline-block;
   position: relative;
   cursor: pointer;
-  height: 8px;
-  width: 8px;
-  margin: 24px 4px;
+  height: 15px;
+  width: 15px;
+  margin: 48px 8px 5px 8px ;
   background-color: var(--carousel-indicator-color);
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -7768,8 +7768,8 @@ input[type=text].text-primary {
   --error-color: #F44336;
   --slider-track-color: rgba(0, 0, 0, 0.26);
   --switch-thumb-off-color: #ffffff;
-  --carousel-indicator-color: rgba(255, 255, 255, 0.45);
-  --carousel-indicator-active-color: #FFF;
+  --carousel-indicator-color: #e9c46a;
+  --carousel-indicator-active-color: #d7431d;
   --primary-color: #f4a261;        /*primary color */
   --primary-color-dark: #1D7D74;
   --primary-color-numeric: 38, 166, 154;
