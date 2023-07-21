@@ -59,22 +59,28 @@
     </div>
 
   </div>
-  <div>
-<% articles.forEach(article => { %>
- <%- article.title %> <br> 
- <img src="<%- article.image %>" alt="">
- <%- article.information %> <br>
-  <% }) %>
-</div>
-
-</div>
 
 
  
+  <div class="container">
 
-  <footer class="page-footer ">
-    <%- include('./partials/footer') %>
-  </footer>
+      <% articles.forEach(article => { %>
+ 
+      <h2 class="body-main-h2 h-shadow-b"><%- article.title %><h2> 
+ 
+       <img class="carousel-sizing" src="<%- article.image %>" alt="">
+ 
+ 
+       <article class=" h-shadow-b flow-text home-p"><%- article.information %> </article>
+  
+      <% }) %>
+  </div>
+
+</div>
+
+<footer class="page-footer ">
+  <%- include('./partials/footer') %>
+</footer>
 
 
 
